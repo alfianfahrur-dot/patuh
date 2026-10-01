@@ -10,7 +10,7 @@ export const FREKUENSI_OPTIONS = [
   { value: 12, label: "Tahunan (tiap 12 bulan)" },
 ];
 export const ROLE_LABEL = {
-  swarna_admin: "Admin Swarna",
+  swarna_admin: "Admin PATUH",
   company_admin: "Admin Perusahaan",
   hrga: "HRGA / PIC Lingkungan",
   supervisor: "Supervisor",

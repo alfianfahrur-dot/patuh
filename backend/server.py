@@ -32,7 +32,7 @@ HRGA = "hrga"
 SUPERVISOR = "supervisor"
 
 ROLE_LABELS = {
-    SWARNA_ADMIN: "Admin Swarna",
+    SWARNA_ADMIN: "Admin PATUH",
     COMPANY_ADMIN: "Admin Perusahaan",
     HRGA: "HRGA / PIC Lingkungan",
     SUPERVISOR: "Supervisor",
@@ -203,7 +203,7 @@ async def _send_verification_email(email: str, name: str, token: str):
     try:
         await mailer.send_email(
             to=email,
-            subject="Verifikasi email Anda - Swarna PROPER Tracker",
+            subject="Verifikasi email Anda - PATUH",
             html=mailer.verification_html(name, token),
         )
         status, msg = "terkirim", "Email verifikasi"
@@ -407,7 +407,7 @@ async def _send_invite_email(email: str, company_name: str, role: str, token: st
     try:
         await mailer.send_email(
             to=email,
-            subject=f"Undangan bergabung {company_name} - Swarna PROPER Tracker",
+            subject=f"Undangan bergabung {company_name} - PATUH",
             html=mailer.invitation_html(company_name, ROLE_LABELS.get(role, role), token),
         )
         await db.notification_log.insert_one({
@@ -970,7 +970,7 @@ async def run_now(user: dict = Depends(require_roles(SWARNA_ADMIN))):
 
 @api.get("/")
 async def root():
-    return {"message": "Swarna PROPER Tracker API"}
+    return {"message": "PATUH API"}
 
 
 # ----------------------------- startup -----------------------------
@@ -981,10 +981,10 @@ async def seed_admin():
     if existing is None:
         await db.users.insert_one({
             "id": new_id(), "email": admin_email, "password_hash": hash_password(admin_password),
-            "name": "Admin Swarna", "role": SWARNA_ADMIN, "company_id": None,
+            "name": "Admin PATUH", "role": SWARNA_ADMIN, "company_id": None,
             "phone": "", "email_verified": True, "created_at": now_iso(),
         })
-        logger.info("Seeded Swarna admin")
+        logger.info("Seeded PATUH admin")
     elif not verify_password(admin_password, existing.get("password_hash", "")):
         await db.users.update_one({"email": admin_email}, {"$set": {"password_hash": hash_password(admin_password)}})
 

@@ -52,8 +52,8 @@ export default function Register() {
             <Leaf className="h-6 w-6 text-emerald-300" />
           </div>
           <div>
-            <div className="font-head font-bold text-xl">Swarna PROPER Tracker</div>
-            <div className="text-emerald-200/80 text-sm">Asisten Kepatuhan Lingkungan</div>
+            <div className="font-head font-bold text-xl">PATUH</div>
+            <div className="text-emerald-200/80 text-sm">Tepat Waktu, Tetap Taat</div>
           </div>
         </div>
         <div className="relative space-y-5">
@@ -70,7 +70,7 @@ export default function Register() {
             <li>✓ Undang tim HRGA Anda sendiri</li>
           </ul>
         </div>
-        <div className="text-emerald-200/60 text-xs relative">© 2026 Swarna · Program PROPER (Merah & Biru)</div>
+        <div className="text-emerald-200/60 text-xs relative">© 2026 PATUH · Program PROPER (Merah & Biru)</div>
       </div>
 
       <div className="flex-1 flex items-center justify-center p-6 bg-[#F8FAFC]">

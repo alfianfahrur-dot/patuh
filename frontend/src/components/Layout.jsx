@@ -17,7 +17,7 @@ const NAV = [
   { to: "/analitik", label: "Skor & Tren", icon: TrendingUp },
   { to: "/tim", label: "Tim & Undangan", icon: Users, roles: ["company_admin", "swarna_admin"] },
   { to: "/notifikasi", label: "Log Pengingat", icon: Bell },
-  { to: "/admin", label: "Admin Swarna", icon: Shield, roles: ["swarna_admin"] },
+  { to: "/admin", label: "Admin PATUH", icon: Shield, roles: ["swarna_admin"] },
 ];
 
 export default function Layout({ children }) {
@@ -34,8 +34,8 @@ export default function Layout({ children }) {
             <Leaf className="h-5 w-5 text-emerald-300" />
           </div>
           <div>
-            <div className="font-head font-bold leading-tight">Swarna</div>
-            <div className="text-[11px] text-emerald-200/80 tracking-wide">PROPER Tracker</div>
+            <div className="font-head font-bold leading-tight">PATUH</div>
+            <div className="text-[11px] text-emerald-200/80 tracking-wide">Tepat Waktu, Tetap Taat</div>
           </div>
         </div>
         <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">

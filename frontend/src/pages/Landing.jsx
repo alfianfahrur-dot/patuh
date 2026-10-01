@@ -19,7 +19,7 @@ const FEATURES = [
 ];
 
 const STEPS = [
-  { n: "1", title: "Daftar atau Terima Undangan", desc: "Buat akun perusahaan Anda, atau terima undangan dari konsultan Swarna." },
+  { n: "1", title: "Daftar atau Terima Undangan", desc: "Buat akun perusahaan Anda, atau terima undangan dari konsultan PATUH." },
   { n: "2", title: "Atur Site & Titik Penaatan", desc: "Tentukan outlet IPAL / cerobong, parameter wajib uji, baku mutu, dan frekuensinya." },
   { n: "3", title: "Terima Pengingat & Unggah LHU", desc: "Sistem mengingatkan jadwal uji. Unggah hasil, jadwal berikutnya dihitung otomatis." },
 ];
@@ -32,8 +32,8 @@ function Nav() {
         <div className="flex items-center gap-2.5">
           <div className="h-10 w-10 rounded-xl bg-emerald-400/20 grid place-items-center"><Leaf className="h-5 w-5 text-emerald-300" /></div>
           <div className="text-white">
-            <div className="font-head font-bold leading-tight">Swarna</div>
-            <div className="text-[11px] text-emerald-200/80 tracking-wide">PROPER Tracker</div>
+            <div className="font-head font-bold leading-tight">PATUH</div>
+            <div className="text-[11px] text-emerald-200/80 tracking-wide">Tepat Waktu, Tetap Taat</div>
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-3">
@@ -183,7 +183,7 @@ export default function Landing() {
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="bg-white rounded-3xl border border-slate-200 p-10 sm:p-14 text-center">
           <h2 className="font-head text-3xl sm:text-4xl font-bold text-emerald-950">Siap jaga peringkat PROPER Anda?</h2>
-          <p className="text-slate-500 mt-4 max-w-xl mx-auto">Daftarkan perusahaan Anda hari ini dan biarkan Swarna mengingatkan setiap jadwal uji — otomatis.</p>
+          <p className="text-slate-500 mt-4 max-w-xl mx-auto">Daftarkan perusahaan Anda hari ini dan biarkan PATUH mengingatkan setiap jadwal uji — otomatis.</p>
           <div className="flex flex-wrap justify-center gap-3 mt-8">
             <Link to="/register"><Button data-testid="cta-register" className="bg-emerald-500 hover:bg-emerald-400 text-white h-12 px-8 text-base">Daftar Gratis</Button></Link>
             <Link to="/login"><Button data-testid="cta-login" variant="outline" className="h-12 px-8 text-base border-emerald-200 text-emerald-800 hover:bg-emerald-50">Masuk</Button></Link>
@@ -196,9 +196,9 @@ export default function Landing() {
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
             <div className="h-9 w-9 rounded-xl bg-emerald-100 grid place-items-center"><Leaf className="h-4 w-4 text-emerald-700" /></div>
-            <span className="font-head font-bold text-emerald-950">Swarna PROPER Tracker</span>
+            <span className="font-head font-bold text-emerald-950">PATUH</span>
           </div>
-          <p className="text-slate-400 text-sm">© 2026 Swarna · Program PROPER (Merah & Biru)</p>
+          <p className="text-slate-400 text-sm">© 2026 PATUH · Program PROPER (Merah & Biru)</p>
         </div>
       </footer>
     </div>

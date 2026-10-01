@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 EMAIL_BASE_URL = "https://integrations.emergentagent.com"
 EMAIL_KEY = os.environ.get("EMERGENT_EMAIL_KEY")
-EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME", "Swarna PROPER Tracker")
+EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME", "PATUH")
 EMAIL_REPLY_TO = os.environ.get("EMAIL_REPLY_TO")
 APP_BASE_URL = os.environ.get("APP_BASE_URL", "http://localhost:3000")
 
@@ -110,10 +110,11 @@ def _shell(inner: str) -> str:
         '<table role="presentation" width="600" style="background:#FFFFFF;border-radius:12px;'
         'overflow:hidden;font-family:Arial,sans-serif;border:1px solid #E2E8F0">'
         '<tr><td style="background:#064E3B;padding:20px 28px">'
-        '<span style="color:#FFFFFF;font-size:18px;font-weight:bold">Swarna PROPER Tracker</span>'
+        '<span style="color:#FFFFFF;font-size:18px;font-weight:bold">PATUH</span>'
+        '<span style="color:#A7F3D0;font-size:12px;margin-left:8px">Tepat Waktu, Tetap Taat</span>'
         '</td></tr>'
         f'<tr><td style="padding:28px">{inner}'
-        '<p style="font-size:12px;color:#94A3B8;margin-top:28px">Dikirim oleh Swarna PROPER Tracker. '
+        '<p style="font-size:12px;color:#94A3B8;margin-top:28px">Dikirim oleh PATUH. '
         'Kami tidak pernah meminta kata sandi Anda melalui email.</p>'
         '</td></tr></table></td></tr></table>'
     )
@@ -124,7 +125,7 @@ def invitation_html(company_name: str, role_label: str, token: str) -> str:
     inner = (
         f'<h2 style="color:#064E3B;margin:0 0 12px">Anda diundang bergabung</h2>'
         f'<p style="color:#334155;font-size:15px">Anda diundang sebagai <strong>{escape(role_label)}</strong> '
-        f'untuk perusahaan <strong>{escape(company_name)}</strong> di Swarna PROPER Tracker.</p>'
+        f'untuk perusahaan <strong>{escape(company_name)}</strong> di PATUH.</p>'
         f'<p style="color:#334155;font-size:15px">Klik tombol di bawah untuk membuat kata sandi dan mengaktifkan akun Anda.</p>'
         f'<p style="margin:24px 0"><a href="{link}" style="background:#059669;color:#FFFFFF;'
         f'text-decoration:none;padding:12px 26px;border-radius:8px;font-weight:bold;font-size:15px">'
@@ -139,7 +140,7 @@ def verification_html(name: str, token: str) -> str:
     inner = (
         f'<h2 style="color:#064E3B;margin:0 0 12px">Verifikasi email Anda</h2>'
         f'<p style="color:#334155;font-size:15px">Halo {escape(name) or "Admin"}, terima kasih telah mendaftarkan '
-        f'perusahaan Anda di Swarna PROPER Tracker.</p>'
+        f'perusahaan Anda di PATUH.</p>'
         f'<p style="color:#334155;font-size:15px">Klik tombol di bawah untuk memverifikasi email dan mengaktifkan akun Anda.</p>'
         f'<p style="margin:24px 0"><a href="{link}" style="background:#059669;color:#FFFFFF;'
         f'text-decoration:none;padding:12px 26px;border-radius:8px;font-weight:bold;font-size:15px">'

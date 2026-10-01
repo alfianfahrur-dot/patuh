@@ -50,7 +50,7 @@ export default function AcceptInvite() {
           <div className="h-10 w-10 rounded-xl bg-emerald-100 grid place-items-center">
             <Leaf className="h-5 w-5 text-emerald-700" />
           </div>
-          <span className="font-head font-bold text-emerald-950 text-lg">Swarna PROPER Tracker</span>
+          <span className="font-head font-bold text-emerald-950 text-lg">PATUH</span>
         </div>
 
         {status === "loading" && <p className="text-slate-500">Memeriksa undangan…</p>}

@@ -65,7 +65,7 @@ export default function Admin() {
       <div className="flex items-center gap-2">
         <Shield className="h-7 w-7 text-emerald-700" />
         <div>
-          <h1 className="font-head text-3xl font-bold text-emerald-950">Panel Admin Swarna</h1>
+          <h1 className="font-head text-3xl font-bold text-emerald-950">Panel Admin PATUH</h1>
           <p className="text-slate-500">Kelola perusahaan klien, undangan, dan konfigurasi pengingat.</p>
         </div>
       </div>
@@ -147,7 +147,7 @@ export default function Admin() {
           <div className="bg-white rounded-2xl border border-slate-200 p-6 max-w-2xl space-y-4">
             <h2 className="font-head font-semibold text-emerald-950">Mesin Pengingat</h2>
             <p className="text-sm text-slate-600">
-              Pengingat otomatis dikirim setiap hari (H-30, H-14, H-7, dan hari-H) ke HRGA/PIC klien dan Admin Swarna yang ditugaskan.
+              Pengingat otomatis dikirim setiap hari (H-30, H-14, H-7, dan hari-H) ke HRGA/PIC klien dan Admin PATUH yang ditugaskan.
               Anda bisa menjalankan pengecekan manual sekarang untuk menguji.
             </p>
             <Button data-testid="run-reminders-button" onClick={runReminders} disabled={sending} className="bg-[#064E3B] text-white">
