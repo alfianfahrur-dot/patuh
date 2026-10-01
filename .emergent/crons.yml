@@ -1,0 +1,9 @@
+crons:
+  - name: daily-reminders
+    description: "Cek jadwal pengujian PROPER tiap hari & kirim reminder H-30/H-14/H-7/H via email"
+    cron: "0 1 * * *"
+    timezone: "Asia/Jakarta"
+    endpoint: "{{BASE_URL}}/api/cron/reminders"
+    method: POST
+    # Cron endpoints must ack 2xx immediately; enqueue/background the actual work.
+    enabled: true

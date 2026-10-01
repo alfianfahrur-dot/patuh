@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 164 70% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 164 70% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 164 70% 10%;
+  --primary: 162 85% 17%;
+  --primary-foreground: 150 80% 97%;
+  --secondary: 152 76% 96%;
+  --secondary-foreground: 162 85% 17%;
+  --muted: 150 30% 95%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 160 84% 39%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 214 25% 90%;
+  --input: 214 25% 90%;
+  --ring: 162 85% 17%;
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  margin: 0;
+  background-color: #F8FAFC;
+  color: hsl(var(--foreground));
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-head {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono-data {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+::selection {
+  background: #064E3B;
+  color: #fff;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.4s ease-out both; }

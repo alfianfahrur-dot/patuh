@@ -1,0 +1,133 @@
+{
+  "project_name": "Swarna PROPER Tracker",
+  "app_type": "saas_app",
+  "target_audience": "Staf HRGA & PIC Lingkungan Perusahaan (Non-Teknis) level Merah & Biru",
+  "emotional_tone": "Clean, authoritative, reassuring, highly intuitive, non-jargon environmental compliance copilot",
+  "theme_preference": {
+    "primary_mode": "Light",
+    "color_palette_type": "Clean Dark Green (Forest & Sage Organic)",
+    "description": "Clean white and soft sage/stone background, rich deep forest green headers & primary elements, bold crimson alerts for overdue/critical compliance items."
+  },
+  "typography": {
+    "font_family_heading": "Outfit, sans-serif",
+    "font_family_body": "Plus Jakarta Sans, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "font_setup_instruction": "Import Google Fonts: Outfit (600, 700), Plus Jakarta Sans (400, 500, 600), JetBrains Mono (500) in index.html or index.css.",
+    "hierarchy": {
+      "h1_hero": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-emerald-950",
+      "h2_section": "text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-emerald-900",
+      "h3_card": "text-lg sm:text-xl font-medium text-emerald-900",
+      "body": "text-sm sm:text-base text-slate-700 leading-relaxed",
+      "subtext_caption": "text-xs sm:text-sm text-slate-500",
+      "mono_data": "font-mono text-sm tracking-tight text-emerald-950"
+    }
+  },
+  "colors": {
+    "primary_dark_green": "#064E3B",
+    "primary_hover": "#022C22",
+    "accent_emerald": "#059669",
+    "accent_sage_light": "#ECFDF5",
+    "accent_mint": "#D1FAE5",
+    "alert_red_bg": "#FEF2F2",
+    "alert_red_border": "#FCA5A5",
+    "alert_red_text": "#991B1B",
+    "alert_red_solid": "#DC2626",
+    "warning_amber_bg": "#FFFBEB",
+    "warning_amber_border": "#FDE68A",
+    "warning_amber_text": "#92400E",
+    "compliance_status": {
+      "taat_blue": {
+        "bg": "#EFF6FF",
+        "border": "#93C5FD",
+        "text": "#1E40AF",
+        "badge": "Peringkat Biru (Taat 100%)"
+      },
+      "tidak_taat_red": {
+        "bg": "#FEF2F2",
+        "border": "#FCA5A5",
+        "text": "#991B1B",
+        "badge": "Peringkat Merah (Perlu Action Cepat)"
+      }
+    },
+    "background_main": "#F8FAFC",
+    "background_card": "#FFFFFF",
+    "border_subtle": "#E2E8F0"
+  },
+  "layout_strategy": {
+    "dashboard_priority": "Apa yang Harus Saya Lakukan Sekarang?",
+    "hero_top_banner": "Red Alert Overdue Banner at the top of Dashboard showing total overdue samples (e.g., '2 Titik Pengujian Telat / Jatuh Tempo Hari Ini'). Direct CTAs to upload LHU or contact Lab immediately.",
+    "bento_grid": "3-column responsive layout: Column 1-2 (Status Urgent, Jadwal Pengujian, Action Checklist, Trend Baku Mutu), Column 3 (Ringkasan Skor Ketaatan, Quick Upload LHU Vault, Lab Terdekat).",
+    "navigation": "Top navigation bar with dark green header (#064E3B), white brand logo 'Swarna PROPER', role switcher/badge, notification bell for 30/14/7 days reminder, and direct WhatsApp/Email alert status."
+  },
+  "key_components": [
+    {
+      "name": "Dashboard Urgent Action Center",
+      "purpose": "Focus non-technical HRGA staff on immediate tasks without overwhelming them with jargon.",
+      "visual": "A prominent alert panel with urgent red pills for overdue items (e.g. 'Air Limbah Outlet 1 - Telat 5 Hari'), amber pills for items due in 7 days, green pills for compliant points."
+    },
+    {
+      "name": "Jadwal & Pengingat Pengujian Berkala",
+      "purpose": "Interactive calendar & timeline view showing 30-day, 14-day, and 7-day countdowns for water/emission testing.",
+      "visual": "Clean timeline cards with toggleable WhatsApp + Email reminder status, contact lab shortcut button."
+    },
+    {
+      "name": "Vault LHU (Laporan Hasil Uji)",
+      "purpose": "Chronological repository for uploading PDF/JPEG laboratory result documents.",
+      "visual": "Drag-and-drop file uploader with auto-extracted/manual entry fields (BOD, COD, TSS, pH) against standard limits (Baku Mutu)."
+    },
+    {
+      "name": "Grafik Tren Parameter (Recharts)",
+      "purpose": "Simple line chart with threshold line (Garis Baku Mutu) so HRGA can easily spot if a parameter exceeds standard limits.",
+      "visual": "Recharts ResponsiveContainer, LineChart with reference line for Permen LHK standard. Green line below threshold, red warning dot if exceeded."
+    },
+    {
+      "name": "Direktori Laboratorium & Tombol Hubungi Lab",
+      "purpose": "Directory of accredited labs (KAN accredited) with one-click WhatsApp pre-filled message generator ('Halo Lab X, kami ingin menjadwalkan pengambilan sampel air limbah untuk PT...').",
+      "visual": "Grid of lab cards with accreditation badge, average turnaround time, and direct contact buttons."
+    },
+    {
+      "name": "Setup Site & Titik Penaatan",
+      "purpose": "Easy form to manage company sites, discharge points (Air Limbah Outlet, Emisi Cerobong, Udara Ambien), and testing frequencies.",
+      "visual": "Step-by-step wizard / simple modal with non-technical guidance."
+    },
+    {
+      "name": "Panel Admin Swarna & Admin Perusahaan",
+      "purpose": "Manage multi-site companies, invite users (HRGA, PIC, Supervisor), configure WhatsApp gateway settings, and view system logs.",
+      "visual": "Structured table with invite modal, role badges, and active session status."
+    }
+  ],
+  "image_urls": [
+    {
+      "category": "lab_testing",
+      "url": "https://images.unsplash.com/photo-1617155093730-a8bf47be792d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwyfHxsYWJvcmF0b3J5JTIwdGVjaG5pY2lhbiUyMHdhdGVyJTIwc2FtcGxlJTIwdGVzdGluZyUyMHNjaWVuY2V8ZW58MHx8fHwxNzkwODM0NzExfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Gloved hand holding beaker in environmental water quality lab"
+    },
+    {
+      "category": "lab_pipette",
+      "url": "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwxfHxsYWJvcmF0b3J5JTIwdGVjaG5pY2lhbiUyMHdhdGVyJTIwc2FtcGxlJTIwdGVzdGluZyUyMHNjaWVuY2V8ZW58MHx8fHwxNzkwODM0NzExfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Lab scientist conducting water sample analysis with test tubes"
+    },
+    {
+      "category": "environment_water",
+      "url": "https://images.unsplash.com/photo-1569622296640-38737c1d82de?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwyfHxlbnZpcm9ubWVudGFsJTIwbGFib3JhdG9yeSUyMHdhdGVyJTIwdGVzdGluZyUyMG5hdHVyZSUyMGdyZWVuJTIwZm9yZXN0JTIwcHJvZmVzc2lvbmFsJTIwaW5kdXN0cmlhbCUyMGNvbXBsaWFuY2V8ZW58MHx8fHwxNzkwODM0NzA0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Clean water body showing environmental conservation goal"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Use JavaScript React (.js / .jsx) components, not TypeScript (.tsx).",
+    "Ensure the main dashboard immediately answers 'Apa yang harus saya lakukan sekarang?' for non-technical HRGA staff.",
+    "Display items due within 30, 14, 7 days, and put overdue items in bold, stark red (#991B1B text on #FEF2F2 card with #DC2626 border) at the top of the dashboard.",
+    "Avoid technical jargon on primary UI labels. Use clear everyday terms (e.g. 'Air Limbah Outlet' instead of 'Point Discharge Outlet IPAL SPARING', 'Batas Aman Baku Mutu' instead of 'Threshold Limit Value').",
+    "Integrate Recharts line charts for parameter trends (BOD, COD, TSS, pH) featuring a reference line for Baku Mutu limit.",
+    "Provide interactive 'Hubungi Lab via WA' modal/button pre-filled with sample pickup request.",
+    "All interactive elements and key text containers MUST include data-testid attributes in kebab-case format.",
+    "Use Sonner for toast notifications ('LHU Berhasil Diunggah', 'Pengingat WA Terkirim', 'Undangan Diterima').",
+    "Provide full Invite-Only auth flow with password setup from invitation link."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": {
+    "data_testid_requirement": "Mandatory on all buttons, inputs, links, badges, table rows, and alert cards.",
+    "hover_contrast_rule": "Always explicitly define hover text and background colors together (e.g., hover:bg-emerald-900 hover:text-white).",
+    "no_transparent_overlays": "Header and dropdown menus must have solid or glassmorphic backgrounds (e.g., bg-white/95 backdrop-blur-md) to prevent overlap legibility issues.",
+    "spacing_scale": "Use generous padding (p-6, p-8) and gaps (gap-6) to ensure clarity for non-technical users."
+  }
+}
