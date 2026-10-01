@@ -2,6 +2,7 @@ import os
 import json
 import uuid
 import hmac
+import asyncio
 import logging
 import calendar
 from datetime import datetime, timezone, date, timedelta
@@ -184,11 +185,24 @@ class WhatsAppConfigBody(BaseModel):
 
 # ----------------------------- auth routes -----------------------------
 @api.post("/auth/login")
-async def login(body: LoginBody):
+async def login(body: LoginBody, request: Request):
     email = body.email.lower().strip()
+    ip = request.client.host if request.client else "unknown"
+    identifier = f"{ip}:{email}"
+    now = datetime.now(timezone.utc)
+    rec = await db.login_attempts.find_one({"identifier": identifier})
+    if rec and rec.get("locked_until") and datetime.fromisoformat(rec["locked_until"]) > now:
+        raise HTTPException(status_code=429, detail="Terlalu banyak percobaan gagal. Coba lagi dalam 15 menit.")
     user = await db.users.find_one({"email": email})
     if not user or not verify_password(body.password, user.get("password_hash", "")):
+        count = (rec.get("count", 0) if rec else 0) + 1
+        update = {"identifier": identifier, "count": count, "last_attempt": now.isoformat()}
+        if count >= 5:
+            update["locked_until"] = (now + timedelta(minutes=15)).isoformat()
+            update["count"] = 0
+        await db.login_attempts.update_one({"identifier": identifier}, {"$set": update}, upsert=True)
         raise HTTPException(status_code=401, detail="Email atau kata sandi salah")
+    await db.login_attempts.delete_one({"identifier": identifier})
     token = create_access_token(user["id"], user["email"])
     safe = {k: v for k, v in user.items() if k not in ("_id", "password_hash")}
     return {"token": token, "user": safe}
@@ -451,6 +465,9 @@ async def update_point(point_id: str, body: MonitoringPointBody, company_id: str
     existing = await db.monitoring_points.find_one({"id": point_id, "company_id": company_id})
     if not existing:
         raise HTTPException(status_code=404, detail="Titik penaatan tidak ditemukan")
+    site = await db.sites.find_one({"id": body.site_id, "company_id": company_id})
+    if not site:
+        raise HTTPException(status_code=400, detail="Site tidak valid")
     # keep existing parameter ids when names match, else regenerate
     params = _serialize_params(body.parameters)
     upd = {
@@ -533,15 +550,29 @@ async def upload_lhu(point_id: str, file: UploadFile = File(...), periode: str =
     point = await db.monitoring_points.find_one({"id": point_id, "company_id": company_id})
     if not point:
         raise HTTPException(status_code=404, detail="Titik penaatan tidak ditemukan")
+    if lab_id:
+        lab = await db.labs.find_one({"id": lab_id, "company_id": company_id})
+        if not lab:
+            raise HTTPException(status_code=400, detail="Lab tidak valid untuk perusahaan ini")
     ext = file.filename.rsplit(".", 1)[-1].lower() if "." in file.filename else "bin"
     path = f"{storage.APP_NAME}/{company_id}/lhu/{new_id()}.{ext}"
     data = await file.read()
     content_type = storage.MIME_TYPES.get(ext, file.content_type or "application/octet-stream")
-    result = storage.put_object(path, data, content_type)
+    result = await asyncio.to_thread(storage.put_object, path, data, content_type)
+    # Evaluate strictly against stored monitoring-point parameters (ignore client-supplied limits)
     try:
-        parsed = _evaluate_results(json.loads(results))
+        client_results = json.loads(results)
     except Exception:
-        parsed = []
+        client_results = []
+    client_map = {str(r.get("nama")): r.get("nilai") for r in client_results if isinstance(r, dict)}
+    merged = []
+    for meta in point.get("parameters", []):
+        merged.append({
+            "nama": meta["nama"], "satuan": meta.get("satuan", ""),
+            "baku_mutu": meta.get("baku_mutu"), "baku_mutu_min": meta.get("baku_mutu_min"),
+            "nilai": client_map.get(meta["nama"]),
+        })
+    parsed = _evaluate_results(merged)
     report = {
         "id": new_id(), "company_id": company_id, "monitoring_point_id": point_id,
         "periode": periode, "tanggal_uji": tanggal_uji, "lab_id": lab_id or None,
@@ -587,7 +618,7 @@ async def download_file(path: str, user: dict = Depends(get_current_user)):
     ids = await get_accessible_company_ids(user)
     if record["company_id"] not in ids:
         raise HTTPException(status_code=403, detail="Tidak punya akses")
-    data, content_type = storage.get_object(path)
+    data, content_type = await asyncio.to_thread(storage.get_object, path)
     return Response(content=data, media_type=record.get("content_type", content_type))
 
 
@@ -858,6 +889,7 @@ async def startup():
     await db.users.create_index("email", unique=True)
     await db.invitations.create_index("token", unique=True)
     await db.notification_log.create_index("dedup_key")
+    await db.login_attempts.create_index("identifier")
     await seed_admin()
     try:
         storage.init_storage()
@@ -874,7 +906,7 @@ async def shutdown():
 app.include_router(api)
 app.add_middleware(
     CORSMiddleware,
-    allow_credentials=True,
+    allow_credentials=False,
     allow_origins=os.environ.get("CORS_ORIGINS", "*").split(","),
     allow_methods=["*"],
     allow_headers=["*"],
