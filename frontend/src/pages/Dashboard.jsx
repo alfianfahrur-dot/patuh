@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "@/lib/api";
+import Onboarding from "@/components/Onboarding";
 import { JENIS_LABEL, dueLabel, formatDate } from "@/lib/helpers";
 import { AlertTriangle, Clock, CheckCircle2, ArrowRight, ShieldCheck, Droplets, Factory, CalendarClock } from "lucide-react";
 
@@ -48,6 +49,8 @@ export default function Dashboard() {
 
   if (err) return <div className="text-slate-500">{typeof err === "string" ? err : "Belum ada perusahaan."}</div>;
   if (!data) return <div className="text-slate-400 animate-pulse">Memuat dashboard…</div>;
+
+  if (data.total_points === 0) return <Onboarding />;
 
   const c = COLOR[data.compliance.color];
   const overdue = data.overdue || [];
