@@ -150,6 +150,22 @@ def verification_html(name: str, token: str) -> str:
     return _shell(inner)
 
 
+def reset_html(name: str, token: str) -> str:
+    link = f"{APP_BASE_URL}/reset-password/{escape(token)}"
+    inner = (
+        f'<h2 style="color:#064E3B;margin:0 0 12px">Reset kata sandi</h2>'
+        f'<p style="color:#334155;font-size:15px">Halo {escape(name) or "rekan"}, kami menerima permintaan untuk '
+        f'mengatur ulang kata sandi akun PATUH Anda.</p>'
+        f'<p style="color:#334155;font-size:15px">Klik tombol di bawah untuk membuat kata sandi baru.</p>'
+        f'<p style="margin:24px 0"><a href="{link}" style="background:#059669;color:#FFFFFF;'
+        f'text-decoration:none;padding:12px 26px;border-radius:8px;font-weight:bold;font-size:15px">'
+        f'Reset Kata Sandi</a></p>'
+        f'<p style="color:#94A3B8;font-size:13px">Tautan ini berlaku 1 jam dan hanya bisa dipakai sekali. '
+        f'Jika Anda tidak meminta reset, abaikan email ini.</p>'
+    )
+    return _shell(inner)
+
+
 def reminder_html(company_name: str, site_name: str, point_name: str, jenis: str,
                   due_date: str, days: int) -> str:
     if days < 0:

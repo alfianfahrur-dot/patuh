@@ -2,6 +2,7 @@ import os
 import json
 import uuid
 import hmac
+import secrets
 import asyncio
 import logging
 import calendar
@@ -195,6 +196,11 @@ class EmailOnlyBody(BaseModel):
     email: EmailStr
 
 
+class ResetPasswordBody(BaseModel):
+    token: str
+    password: str
+
+
 def _new_verification_token() -> str:
     return new_id() + new_id().replace("-", "")
 
@@ -310,6 +316,61 @@ async def login(body: LoginBody, request: Request):
     token = create_access_token(user["id"], user["email"])
     safe = {k: v for k, v in user.items() if k not in ("_id", "password_hash")}
     return {"token": token, "user": safe}
+
+
+async def _send_reset_email(email: str, name: str, token: str):
+    try:
+        await mailer.send_email(
+            to=email,
+            subject="Reset kata sandi - PATUH",
+            html=mailer.reset_html(name, token),
+        )
+        status, msg = "terkirim", "Email reset kata sandi"
+    except Exception as e:
+        logger.error(f"Reset email failed: {e}")
+        status, msg = "gagal", str(e)
+    await db.notification_log.insert_one({
+        "id": new_id(), "company_id": None, "type": "reset_password", "recipient_email": email,
+        "channel": "email", "status": status, "sent_at": now_iso(), "message": msg,
+    })
+
+
+@api.post("/auth/forgot-password")
+async def forgot_password(body: EmailOnlyBody, bg: BackgroundTasks):
+    email = body.email.lower().strip()
+    user = await db.users.find_one({"email": email})
+    if user:
+        token = secrets.token_urlsafe(32)
+        await db.password_reset_tokens.insert_one({
+            "id": new_id(), "user_id": user["id"], "email": email, "token": token, "used": False,
+            "expires_at": (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat(), "created_at": now_iso(),
+        })
+        bg.add_task(_send_reset_email, email, user.get("name", ""), token)
+    return {"status": "ok"}
+
+
+@api.get("/auth/validate-reset/{token}")
+async def validate_reset(token: str):
+    rec = await db.password_reset_tokens.find_one({"token": token}, {"_id": 0})
+    if not rec or rec.get("used"):
+        raise HTTPException(status_code=404, detail="Tautan reset tidak ditemukan atau sudah dipakai")
+    if datetime.fromisoformat(rec["expires_at"]) < datetime.now(timezone.utc):
+        raise HTTPException(status_code=410, detail="Tautan reset sudah kedaluwarsa. Minta tautan baru.")
+    return {"email": rec["email"]}
+
+
+@api.post("/auth/reset-password")
+async def reset_password(body: ResetPasswordBody):
+    if len(body.password) < 6:
+        raise HTTPException(status_code=400, detail="Kata sandi minimal 6 karakter")
+    rec = await db.password_reset_tokens.find_one({"token": body.token})
+    if not rec or rec.get("used"):
+        raise HTTPException(status_code=404, detail="Tautan reset tidak ditemukan atau sudah dipakai")
+    if datetime.fromisoformat(rec["expires_at"]) < datetime.now(timezone.utc):
+        raise HTTPException(status_code=410, detail="Tautan reset sudah kedaluwarsa. Minta tautan baru.")
+    await db.users.update_one({"id": rec["user_id"]}, {"$set": {"password_hash": hash_password(body.password)}})
+    await db.password_reset_tokens.update_one({"id": rec["id"]}, {"$set": {"used": True, "used_at": now_iso()}})
+    return {"status": "ok"}
 
 
 @api.get("/auth/me")
@@ -995,6 +1056,7 @@ async def startup():
     await db.invitations.create_index("token", unique=True)
     await db.notification_log.create_index("dedup_key")
     await db.login_attempts.create_index("identifier")
+    await db.password_reset_tokens.create_index("token")
     await seed_admin()
     try:
         storage.init_storage()
