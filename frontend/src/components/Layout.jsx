@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const NAV = [
-  { to: "/", label: "Dashboard", icon: LayoutDashboard, end: true },
+  { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard, end: true },
   { to: "/sites", label: "Site & Titik Uji", icon: MapPin },
   { to: "/vault", label: "Vault LHU", icon: FolderArchive },
   { to: "/lab", label: "Direktori Lab", icon: FlaskConical },

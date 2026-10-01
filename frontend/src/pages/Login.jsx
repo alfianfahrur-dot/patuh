@@ -22,7 +22,7 @@ export default function Login() {
     try {
       const { data } = await api.post("/auth/login", { email, password });
       await login(data.token, data.user);
-      navigate("/");
+      navigate("/dashboard");
     } catch (err) {
       setError(apiError(err, "Gagal masuk"));
     } finally {

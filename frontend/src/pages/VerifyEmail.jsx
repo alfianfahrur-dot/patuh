@@ -17,7 +17,7 @@ export default function VerifyEmail() {
       .then(async ({ data }) => {
         setStatus("ok");
         await login(data.token, data.user);
-        setTimeout(() => navigate("/"), 1200);
+        setTimeout(() => navigate("/dashboard"), 1200);
       })
       .catch((e) => { setError(apiError(e)); setStatus("error"); });
   }, [token]);

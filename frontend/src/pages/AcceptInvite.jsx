@@ -36,7 +36,7 @@ export default function AcceptInvite() {
     try {
       const { data } = await api.post("/invitations/accept", { token, name, password, phone });
       await login(data.token, data.user);
-      navigate("/");
+      navigate("/dashboard");
     } catch (err) {
       setError(apiError(err));
       setSubmitting(false);

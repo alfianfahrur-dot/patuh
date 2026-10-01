@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { AuthProvider } from "@/context/AuthContext";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Layout from "@/components/Layout";
+import Landing from "@/pages/Landing";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import VerifyEmail from "@/pages/VerifyEmail";
@@ -29,11 +30,12 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
+            <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/verify-email/:token" element={<VerifyEmail />} />
             <Route path="/invite/:token" element={<AcceptInvite />} />
-            <Route path="/" element={wrap(<Dashboard />)} />
+            <Route path="/dashboard" element={wrap(<Dashboard />)} />
             <Route path="/sites" element={wrap(<Sites />)} />
             <Route path="/vault" element={wrap(<Vault />)} />
             <Route path="/lab" element={wrap(<Labs />)} />
