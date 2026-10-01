@@ -191,9 +191,34 @@ class RegisterCompanyBody(BaseModel):
     phone: Optional[str] = ""
 
 
+class EmailOnlyBody(BaseModel):
+    email: EmailStr
+
+
+def _new_verification_token() -> str:
+    return new_id() + new_id().replace("-", "")
+
+
+async def _send_verification_email(email: str, name: str, token: str):
+    try:
+        await mailer.send_email(
+            to=email,
+            subject="Verifikasi email Anda - Swarna PROPER Tracker",
+            html=mailer.verification_html(name, token),
+        )
+        status, msg = "terkirim", "Email verifikasi"
+    except Exception as e:
+        logger.error(f"Verification email failed: {e}")
+        status, msg = "gagal", str(e)
+    await db.notification_log.insert_one({
+        "id": new_id(), "company_id": None, "type": "verification", "recipient_email": email,
+        "channel": "email", "status": status, "sent_at": now_iso(), "message": msg,
+    })
+
+
 # ----------------------------- auth routes -----------------------------
 @api.post("/auth/register-company")
-async def register_company(body: RegisterCompanyBody):
+async def register_company(body: RegisterCompanyBody, bg: BackgroundTasks):
     email = body.email.lower().strip()
     if len(body.password) < 6:
         raise HTTPException(status_code=400, detail="Kata sandi minimal 6 karakter")
@@ -202,7 +227,7 @@ async def register_company(body: RegisterCompanyBody):
     company = {
         "id": new_id(),
         "name": body.company_name,
-        "status_pendaftaran": "aktif",
+        "status_pendaftaran": "menunggu_verifikasi",
         "metode_masuk": "self_signup",
         "created_at": now_iso(),
         "created_by": None,
@@ -216,11 +241,49 @@ async def register_company(body: RegisterCompanyBody):
         "phone": body.phone or "",
         "role": COMPANY_ADMIN,
         "company_id": company["id"],
+        "email_verified": False,
         "created_at": now_iso(),
     }
     await db.users.insert_one(user)
-    token = create_access_token(user["id"], user["email"])
-    return {"token": token, "user": {k: v for k, v in user.items() if k not in ("_id", "password_hash")}}
+    vtoken = _new_verification_token()
+    await db.email_verifications.insert_one({
+        "id": new_id(), "email": email, "user_id": user["id"], "token": vtoken, "used": False,
+        "expires_at": (datetime.now(timezone.utc) + timedelta(days=2)).isoformat(), "created_at": now_iso(),
+    })
+    bg.add_task(_send_verification_email, email, body.name, vtoken)
+    return {"status": "verification_sent", "email": email}
+
+
+@api.get("/auth/verify-email/{token}")
+async def verify_email(token: str):
+    rec = await db.email_verifications.find_one({"token": token})
+    if not rec or rec.get("used"):
+        raise HTTPException(status_code=404, detail="Tautan verifikasi tidak ditemukan atau sudah dipakai")
+    if datetime.fromisoformat(rec["expires_at"]) < datetime.now(timezone.utc):
+        raise HTTPException(status_code=410, detail="Tautan verifikasi sudah kedaluwarsa. Minta kirim ulang.")
+    user = await db.users.find_one({"id": rec["user_id"]})
+    if not user:
+        raise HTTPException(status_code=404, detail="Pengguna tidak ditemukan")
+    await db.users.update_one({"id": user["id"]}, {"$set": {"email_verified": True}})
+    await db.companies.update_one({"id": user["company_id"], "status_pendaftaran": "menunggu_verifikasi"},
+                                  {"$set": {"status_pendaftaran": "aktif"}})
+    await db.email_verifications.update_one({"id": rec["id"]}, {"$set": {"used": True, "used_at": now_iso()}})
+    jwt_token = create_access_token(user["id"], user["email"])
+    return {"token": jwt_token, "user": {k: v for k, v in user.items() if k not in ("_id", "password_hash")}}
+
+
+@api.post("/auth/resend-verification")
+async def resend_verification(body: EmailOnlyBody, bg: BackgroundTasks):
+    email = body.email.lower().strip()
+    user = await db.users.find_one({"email": email})
+    if user and user.get("email_verified") is False:
+        vtoken = _new_verification_token()
+        await db.email_verifications.insert_one({
+            "id": new_id(), "email": email, "user_id": user["id"], "token": vtoken, "used": False,
+            "expires_at": (datetime.now(timezone.utc) + timedelta(days=2)).isoformat(), "created_at": now_iso(),
+        })
+        bg.add_task(_send_verification_email, email, user.get("name", ""), vtoken)
+    return {"status": "ok"}
 
 
 @api.post("/auth/login")
@@ -242,6 +305,8 @@ async def login(body: LoginBody, request: Request):
         await db.login_attempts.update_one({"identifier": identifier}, {"$set": update}, upsert=True)
         raise HTTPException(status_code=401, detail="Email atau kata sandi salah")
     await db.login_attempts.delete_one({"identifier": identifier})
+    if user.get("email_verified") is False:
+        raise HTTPException(status_code=403, detail="Email belum diverifikasi. Cek kotak masuk Anda untuk tautan verifikasi.")
     token = create_access_token(user["id"], user["email"])
     safe = {k: v for k, v in user.items() if k not in ("_id", "password_hash")}
     return {"token": token, "user": safe}
@@ -291,6 +356,7 @@ async def accept_invite(body: AcceptInviteBody):
         "phone": body.phone or "",
         "role": inv["role"],
         "company_id": inv["company_id"],
+        "email_verified": True,
         "created_at": now_iso(),
     }
     await db.users.insert_one(user)
@@ -916,7 +982,7 @@ async def seed_admin():
         await db.users.insert_one({
             "id": new_id(), "email": admin_email, "password_hash": hash_password(admin_password),
             "name": "Admin Swarna", "role": SWARNA_ADMIN, "company_id": None,
-            "phone": "", "created_at": now_iso(),
+            "phone": "", "email_verified": True, "created_at": now_iso(),
         })
         logger.info("Seeded Swarna admin")
     elif not verify_password(admin_password, existing.get("password_hash", "")):

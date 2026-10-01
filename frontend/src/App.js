@@ -6,6 +6,7 @@ import ProtectedRoute from "@/components/ProtectedRoute";
 import Layout from "@/components/Layout";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
+import VerifyEmail from "@/pages/VerifyEmail";
 import AcceptInvite from "@/pages/AcceptInvite";
 import Dashboard from "@/pages/Dashboard";
 import Sites from "@/pages/Sites";
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/verify-email/:token" element={<VerifyEmail />} />
             <Route path="/invite/:token" element={<AcceptInvite />} />
             <Route path="/" element={wrap(<Dashboard />)} />
             <Route path="/sites" element={wrap(<Sites />)} />

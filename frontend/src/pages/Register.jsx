@@ -1,18 +1,17 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import api, { apiError } from "@/lib/api";
-import { useAuth } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Leaf, Building2 } from "lucide-react";
 
 export default function Register() {
-  const { login } = useAuth();
-  const navigate = useNavigate();
   const [form, setForm] = useState({ company_name: "", name: "", email: "", phone: "", password: "", confirm: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [resending, setResending] = useState(false);
 
   const set = (k, v) => setForm({ ...form, [k]: v });
 
@@ -22,15 +21,24 @@ export default function Register() {
     if (form.password.length < 6) { setError("Kata sandi minimal 6 karakter"); return; }
     setLoading(true); setError("");
     try {
-      const { data } = await api.post("/auth/register-company", {
+      await api.post("/auth/register-company", {
         company_name: form.company_name, name: form.name, email: form.email,
         password: form.password, phone: form.phone,
       });
-      await login(data.token, data.user);
-      navigate("/");
+      setSent(true);
     } catch (err) {
       setError(apiError(err, "Gagal mendaftar"));
+    } finally {
       setLoading(false);
+    }
+  };
+
+  const resend = async () => {
+    setResending(true);
+    try {
+      await api.post("/auth/resend-verification", { email: form.email });
+    } finally {
+      setResending(false);
     }
   };
 
@@ -66,6 +74,25 @@ export default function Register() {
       </div>
 
       <div className="flex-1 flex items-center justify-center p-6 bg-[#F8FAFC]">
+        {sent ? (
+          <div className="w-full max-w-sm text-center" data-testid="register-sent">
+            <div className="h-14 w-14 rounded-2xl bg-emerald-100 grid place-items-center mx-auto mb-4">
+              <Building2 className="h-7 w-7 text-emerald-700" />
+            </div>
+            <h2 className="font-head text-2xl font-bold text-emerald-950">Cek email Anda</h2>
+            <p className="text-slate-600 text-sm mt-2">
+              Kami mengirim tautan verifikasi ke <strong className="text-emerald-900">{form.email}</strong>.
+              Klik tautan tersebut untuk mengaktifkan akun. Akun belum bisa dipakai sebelum diverifikasi.
+            </p>
+            <p className="text-slate-400 text-xs mt-3">Tidak menerima email? Cek folder spam, atau kirim ulang.</p>
+            <div className="mt-5 flex flex-col gap-2">
+              <Button onClick={resend} disabled={resending} data-testid="resend-verification" className="bg-[#064E3B] hover:bg-[#022C22] text-white h-11">
+                {resending ? "Mengirim…" : "Kirim Ulang Tautan"}
+              </Button>
+              <Link to="/login" className="text-emerald-700 font-semibold hover:underline text-sm">Kembali ke halaman Masuk</Link>
+            </div>
+          </div>
+        ) : (
         <form onSubmit={submit} className="w-full max-w-sm" data-testid="register-form">
           <div className="flex items-center gap-2 text-emerald-700 mb-1">
             <Building2 className="h-5 w-5" />
@@ -106,6 +133,7 @@ export default function Register() {
             {loading ? "Mendaftar…" : "Daftar & Mulai"}
           </Button>
         </form>
+        )}
       </div>
     </div>
   );
