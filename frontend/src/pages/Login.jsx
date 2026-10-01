@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import api, { apiError } from "@/lib/api";
 import { useAuth } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
@@ -70,7 +70,7 @@ export default function Login() {
       <div className="flex-1 flex items-center justify-center p-6 bg-[#F8FAFC]">
         <form onSubmit={submit} className="w-full max-w-sm" data-testid="login-form">
           <h2 className="font-head text-2xl font-bold text-emerald-950">Masuk ke akun Anda</h2>
-          <p className="text-slate-500 text-sm mt-1 mb-6">Akses lewat undangan dari Admin Swarna.</p>
+          <p className="text-slate-500 text-sm mt-1 mb-6">Belum punya akun perusahaan? <Link to="/register" className="text-emerald-700 font-semibold hover:underline" data-testid="to-register-link">Daftar di sini</Link></p>
           {error && (
             <div data-testid="login-error" className="mb-4 text-sm bg-[#FEF2F2] text-[#991B1B] border border-[#FCA5A5] rounded-lg px-4 py-2.5">
               {error}

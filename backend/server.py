@@ -183,7 +183,46 @@ class WhatsAppConfigBody(BaseModel):
     sender_number: Optional[str] = ""
 
 
+class RegisterCompanyBody(BaseModel):
+    company_name: str
+    name: str
+    email: EmailStr
+    password: str
+    phone: Optional[str] = ""
+
+
 # ----------------------------- auth routes -----------------------------
+@api.post("/auth/register-company")
+async def register_company(body: RegisterCompanyBody):
+    email = body.email.lower().strip()
+    if len(body.password) < 6:
+        raise HTTPException(status_code=400, detail="Kata sandi minimal 6 karakter")
+    if await db.users.find_one({"email": email}):
+        raise HTTPException(status_code=409, detail="Email sudah terdaftar. Silakan masuk.")
+    company = {
+        "id": new_id(),
+        "name": body.company_name,
+        "status_pendaftaran": "aktif",
+        "metode_masuk": "self_signup",
+        "created_at": now_iso(),
+        "created_by": None,
+    }
+    await db.companies.insert_one(company)
+    user = {
+        "id": new_id(),
+        "email": email,
+        "password_hash": hash_password(body.password),
+        "name": body.name,
+        "phone": body.phone or "",
+        "role": COMPANY_ADMIN,
+        "company_id": company["id"],
+        "created_at": now_iso(),
+    }
+    await db.users.insert_one(user)
+    token = create_access_token(user["id"], user["email"])
+    return {"token": token, "user": {k: v for k, v in user.items() if k not in ("_id", "password_hash")}}
+
+
 @api.post("/auth/login")
 async def login(body: LoginBody, request: Request):
     email = body.email.lower().strip()
