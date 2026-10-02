@@ -43,8 +43,8 @@ export default function Analytics() {
     api.get("/monitoring-points").then(({ data }) => {
       setPoints(data);
       if (data.length) setPointId(data[0].id);
-    });
-    api.get("/compliance").then(({ data }) => setCompliance(data));
+    }).catch(() => {});
+    api.get("/compliance").then(({ data }) => setCompliance(data)).catch(() => {});
   }, []);
 
   const point = useMemo(() => points.find((p) => p.id === pointId), [points, pointId]);
@@ -58,13 +58,13 @@ export default function Analytics() {
       if (asc.length >= 2) { setAId(asc[asc.length - 2].id); setBId(asc[asc.length - 1].id); }
       else if (asc.length === 1) { setAId(asc[0].id); setBId(asc[0].id); }
       else { setAId(""); setBId(""); }
-    });
+    }).catch(() => {});
     if (params.length) setParam(params[0].nama); else setParam("");
   }, [pointId]);
 
   useEffect(() => {
     if (pointId && param) {
-      api.get(`/monitoring-points/${pointId}/trend`, { params: { parameter: param } }).then(({ data }) => setTrend(data));
+      api.get(`/monitoring-points/${pointId}/trend`, { params: { parameter: param } }).then(({ data }) => setTrend(data)).catch(() => {});
     } else setTrend(null);
   }, [pointId, param]);
 

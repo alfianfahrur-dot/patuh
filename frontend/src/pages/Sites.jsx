@@ -25,8 +25,10 @@ export default function Sites() {
   const [pForm, setPForm] = useState({ site_id: "", name: "", jenis: "air_limbah", frekuensi_bulan: 6, tanggal_uji_terakhir: "", parameters: [emptyParam()] });
 
   const load = async () => {
-    const [s, p] = await Promise.all([api.get("/sites"), api.get("/monitoring-points")]);
-    setSites(s.data); setPoints(p.data);
+    try {
+      const [s, p] = await Promise.all([api.get("/sites"), api.get("/monitoring-points")]);
+      setSites(s.data); setPoints(p.data);
+    } catch (e) { toast.error(apiError(e)); }
   };
   useEffect(() => { load(); }, []);
 

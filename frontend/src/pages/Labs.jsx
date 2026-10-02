@@ -22,7 +22,10 @@ export default function Labs() {
   const [form, setForm] = useState(empty);
   const company = JSON.parse(localStorage.getItem("swarna_company_name") || "null");
 
-  const load = async () => setLabs((await api.get("/labs")).data);
+  const load = async () => {
+    try { setLabs((await api.get("/labs")).data); }
+    catch (e) { toast.error(apiError(e)); }
+  };
   useEffect(() => { load(); }, []);
 
   const openNew = () => { setEditing(null); setForm(empty); setOpen(true); };

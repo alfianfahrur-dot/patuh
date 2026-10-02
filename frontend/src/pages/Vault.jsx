@@ -26,15 +26,17 @@ export default function Vault() {
     Promise.all([api.get("/monitoring-points"), api.get("/labs")]).then(([p, l]) => {
       setPoints(p.data); setLabs(l.data);
       if (p.data.length) setSelected(p.data[0].id);
-    });
+    }).catch((e) => toast.error(apiError(e)));
   }, []);
 
   const point = useMemo(() => points.find((p) => p.id === selected), [points, selected]);
 
   const loadReports = async (id) => {
     if (!id) return;
-    const { data } = await api.get(`/monitoring-points/${id}/lhu`);
-    setReports(data);
+    try {
+      const { data } = await api.get(`/monitoring-points/${id}/lhu`);
+      setReports(data);
+    } catch (e) { toast.error(apiError(e)); }
   };
   useEffect(() => { loadReports(selected); }, [selected]);
 

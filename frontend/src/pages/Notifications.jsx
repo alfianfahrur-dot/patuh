@@ -6,7 +6,7 @@ import { Bell, Mail, MessageCircle, CheckCircle2, XCircle } from "lucide-react";
 
 export default function Notifications() {
   const [logs, setLogs] = useState([]);
-  useEffect(() => { api.get("/notifications").then(({ data }) => setLogs(data)); }, []);
+  useEffect(() => { api.get("/notifications").then(({ data }) => setLogs(data)).catch(() => {}); }, []);
 
   return (
     <div className="animate-fade-up space-y-6">

@@ -22,8 +22,10 @@ export default function Team() {
   const [lastLink, setLastLink] = useState("");
 
   const load = async () => {
-    const [u, i] = await Promise.all([api.get("/users"), api.get("/invitations")]);
-    setMembers(u.data); setInvites(i.data);
+    try {
+      const [u, i] = await Promise.all([api.get("/users"), api.get("/invitations")]);
+      setMembers(u.data); setInvites(i.data);
+    } catch (e) { toast.error(apiError(e)); }
   };
   useEffect(() => { load(); }, []);
 

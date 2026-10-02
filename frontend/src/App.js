@@ -19,10 +19,11 @@ import Analytics from "@/pages/Analytics";
 import Team from "@/pages/Team";
 import Notifications from "@/pages/Notifications";
 import Admin from "@/pages/Admin";
+import CompanyScoped from "@/components/CompanyScoped";
 
-const wrap = (el, roles) => (
+const wrap = (el, roles, scoped = true) => (
   <ProtectedRoute roles={roles}>
-    <Layout>{el}</Layout>
+    <Layout>{scoped ? <CompanyScoped>{el}</CompanyScoped> : el}</Layout>
   </ProtectedRoute>
 );
 
@@ -46,7 +47,7 @@ function App() {
             <Route path="/analitik" element={wrap(<Analytics />)} />
             <Route path="/tim" element={wrap(<Team />, ["company_admin", "swarna_admin"])} />
             <Route path="/notifikasi" element={wrap(<Notifications />)} />
-            <Route path="/admin" element={wrap(<Admin />, ["swarna_admin"])} />
+            <Route path="/admin" element={wrap(<Admin />, ["swarna_admin"], false)} />
           </Routes>
         </BrowserRouter>
         <Toaster richColors position="top-right" />

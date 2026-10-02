@@ -7,6 +7,7 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null); // null=checking, false=guest
   const [companies, setCompanies] = useState([]);
   const [companyId, setCompanyId] = useState(localStorage.getItem("swarna_company_id") || "");
+  const [companiesLoaded, setCompaniesLoaded] = useState(false);
 
   const loadCompanies = useCallback(async () => {
     try {
@@ -24,6 +25,8 @@ export function AuthProvider({ children }) {
       }
     } catch {
       /* ignore */
+    } finally {
+      setCompaniesLoaded(true);
     }
   }, []);
 
@@ -54,6 +57,7 @@ export function AuthProvider({ children }) {
     setUser(false);
     setCompanies([]);
     setCompanyId("");
+    setCompaniesLoaded(false);
   };
 
   const switchCompany = (id) => {
@@ -63,7 +67,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, setUser, companies, companyId, login, logout, switchCompany, loadCompanies }}>
+    <AuthContext.Provider value={{ user, setUser, companies, companyId, companiesLoaded, login, logout, switchCompany, loadCompanies }}>
       {children}
     </AuthContext.Provider>
   );
