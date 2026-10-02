@@ -293,7 +293,7 @@ def test_13_delete_site_and_point(state):
 
 
 def test_14_cors_explicit_origin_and_auth_failure(state):
-    origin = "https://lhu-vault.preview.emergentagent.com"
+    origin = "https://gh-sync-20.preview.emergentagent.com"
     options = requests.options(f"{BASE_URL}/api/auth/login", headers={"Origin": origin, "Access-Control-Request-Method": "POST"}, timeout=30)
     assert options.status_code == 200
     assert options.headers.get("access-control-allow-credentials") == "true"
