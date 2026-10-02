@@ -20,6 +20,9 @@ from db import db, client
 from auth_utils import hash_password, verify_password, create_access_token, decode_token
 import storage_service as storage
 import email_service as mailer
+import baku_mutu as bm_logic
+
+SEED_PATH = os.path.join(os.path.dirname(__file__), "baku_mutu_seed.json")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -158,15 +161,28 @@ class ParameterBody(BaseModel):
     satuan: str = ""
     baku_mutu: Optional[float] = None
     baku_mutu_min: Optional[float] = None
+    kode: Optional[str] = None
+    tipe: str = "maks"  # maks | rentang | negatif
+    teks: Optional[str] = None
+    periode: Optional[str] = None
+    override: bool = False
+    alasan: Optional[str] = None
 
 
 class MonitoringPointBody(BaseModel):
     site_id: str
     name: str
-    jenis: str  # air_limbah | emisi
+    jenis: str  # air_limbah | emisi | udara_ambien
     frekuensi_bulan: int = 6
     tanggal_uji_terakhir: Optional[str] = None
     parameters: List[ParameterBody] = []
+    standar_id: Optional[str] = None
+    sumber_baku_mutu: Optional[str] = None  # saran_otomatis | manual | persetujuan_teknis
+    sumber_catatan: Optional[str] = None
+
+
+class TerapkanBakuMutuBody(BaseModel):
+    standar_id: str
 
 
 class LabBody(BaseModel):
@@ -575,7 +591,9 @@ def _serialize_params(params: List[ParameterBody]) -> list:
     out = []
     for p in params:
         out.append({"id": new_id(), "nama": p.nama, "satuan": p.satuan or "",
-                    "baku_mutu": p.baku_mutu, "baku_mutu_min": p.baku_mutu_min})
+                    "baku_mutu": p.baku_mutu, "baku_mutu_min": p.baku_mutu_min,
+                    "kode": p.kode, "tipe": p.tipe or "maks", "teks": p.teks,
+                    "periode": p.periode, "override": bool(p.override), "alasan": p.alasan})
     return out
 
 
@@ -607,6 +625,9 @@ async def create_point(body: MonitoringPointBody, company_id: str = Depends(get_
         "tanggal_uji_terakhir": body.tanggal_uji_terakhir,
         "tanggal_jatuh_tempo_berikutnya": compute_due(body.tanggal_uji_terakhir, body.frekuensi_bulan),
         "parameters": _serialize_params(body.parameters),
+        "standar_id": body.standar_id,
+        "sumber_baku_mutu": body.sumber_baku_mutu or ("saran_otomatis" if body.standar_id else "manual"),
+        "sumber_catatan": body.sumber_catatan,
         "created_at": now_iso(),
     }
     await db.monitoring_points.insert_one(point)
@@ -641,6 +662,9 @@ async def update_point(point_id: str, body: MonitoringPointBody, company_id: str
         "frekuensi_bulan": body.frekuensi_bulan, "tanggal_uji_terakhir": body.tanggal_uji_terakhir,
         "tanggal_jatuh_tempo_berikutnya": compute_due(body.tanggal_uji_terakhir, body.frekuensi_bulan),
         "parameters": params,
+        "standar_id": body.standar_id,
+        "sumber_baku_mutu": body.sumber_baku_mutu or existing.get("sumber_baku_mutu") or "manual",
+        "sumber_catatan": body.sumber_catatan,
     }
     await db.monitoring_points.update_one({"id": point_id}, {"$set": upd})
     return await db.monitoring_points.find_one({"id": point_id}, {"_id": 0})
@@ -689,21 +713,19 @@ async def delete_lab(lab_id: str, company_id: str = Depends(get_company_id),
 
 
 # ----------------------------- LHU / test reports -----------------------------
-def _evaluate_results(results: list) -> list:
+def _evaluate_results(results: list, ambang: float = 0.8) -> list:
     out = []
     for r in results:
-        nilai = r.get("nilai")
-        bm = r.get("baku_mutu")
-        bmin = r.get("baku_mutu_min")
-        status = "sesuai"
-        try:
-            v = float(nilai)
-            if bm is not None and v > float(bm):
-                status = "melebihi"
-            if bmin is not None and v < float(bmin):
-                status = "melebihi"
-        except (TypeError, ValueError):
-            status = "sesuai"
+        status = bm_logic.evaluate_result(
+            nilai=r.get("nilai"),
+            tipe=r.get("tipe", "maks"),
+            baku_mutu=r.get("baku_mutu"),
+            baku_mutu_min=r.get("baku_mutu_min"),
+            teks=r.get("teks"),
+            satuan_meta=r.get("satuan", ""),
+            satuan_input=r.get("satuan_input"),
+            ambang=ambang,
+        )
         out.append({**r, "status": status})
     return out
 
@@ -730,15 +752,23 @@ async def upload_lhu(point_id: str, file: UploadFile = File(...), periode: str =
         client_results = json.loads(results)
     except Exception:
         client_results = []
-    client_map = {str(r.get("nama")): r.get("nilai") for r in client_results if isinstance(r, dict)}
+    client_map = {str(r.get("nama")): r for r in client_results if isinstance(r, dict)}
+    # per-company warning threshold (ambang_peringatan)
+    company = await db.companies.find_one({"id": company_id}, {"_id": 0, "ambang_peringatan_persen": 1})
+    ambang = (company or {}).get("ambang_peringatan_persen")
+    ambang = (float(ambang) / 100.0) if ambang else 0.8
     merged = []
     for meta in point.get("parameters", []):
+        cr = client_map.get(meta["nama"], {})
         merged.append({
             "nama": meta["nama"], "satuan": meta.get("satuan", ""),
+            "kode": meta.get("kode"), "tipe": meta.get("tipe", "maks"),
+            "teks": meta.get("teks"), "periode": meta.get("periode"),
             "baku_mutu": meta.get("baku_mutu"), "baku_mutu_min": meta.get("baku_mutu_min"),
-            "nilai": client_map.get(meta["nama"]),
+            "nilai": cr.get("nilai") if isinstance(cr, dict) else client_map.get(meta["nama"]),
+            "satuan_input": cr.get("satuan") if isinstance(cr, dict) else None,
         })
-    parsed = _evaluate_results(merged)
+    parsed = _evaluate_results(merged, ambang=ambang)
     report = {
         "id": new_id(), "company_id": company_id, "monitoring_point_id": point_id,
         "periode": periode, "tanggal_uji": tanggal_uji, "lab_id": lab_id or None,
@@ -837,7 +867,7 @@ async def _compliance(company_id: str, points: list) -> dict:
             .sort("tanggal_uji", -1).to_list(1)
         hasil_sesuai = True
         if latest:
-            hasil_sesuai = all(r.get("status") == "sesuai" for r in latest[0].get("results", []))
+            hasil_sesuai = all(r.get("status") != "melebihi" for r in latest[0].get("results", []))
         else:
             on_time = False
         compliant = on_time and hasil_sesuai
@@ -894,6 +924,198 @@ async def trend(point_id: str, parameter: str, company_id: str = Depends(get_com
         "baku_mutu": baku_mutu, "baku_mutu_min": baku_mutu_min,
         "series": series, "change_percent": change_percent, "perlu_perhatian": perlu_perhatian,
     }
+
+
+# ----------------------------- baku mutu (standards library) -----------------------------
+async def _regulasi_map() -> dict:
+    rows = await db.regulasi.find({}, {"_id": 0}).to_list(1000)
+    return {r["id"]: r for r in rows}
+
+
+@api.post("/admin/baku-mutu/seed")
+async def seed_baku_mutu(user: dict = Depends(require_roles(SWARNA_ADMIN))):
+    """Idempotent upsert of regulasi + baku_mutu_standar from the seed file.
+    Verification fields and versi/riwayat are preserved across re-seeds."""
+    try:
+        with open(SEED_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Gagal membaca file seed: {e}")
+
+    reg_add = reg_upd = std_add = std_upd = 0
+    for reg in data.get("regulasi", []):
+        existing = await db.regulasi.find_one({"id": reg["id"]}, {"_id": 0})
+        doc = {**reg, "aktif": True}
+        if existing:
+            await db.regulasi.update_one({"id": reg["id"]}, {"$set": doc})
+            reg_upd += 1
+        else:
+            await db.regulasi.insert_one(doc)
+            reg_add += 1
+
+    for std in data.get("standar", []):
+        existing = await db.baku_mutu_standar.find_one({"id": std["id"]}, {"_id": 0})
+        base = {**std, "aktif": True}
+        if existing:
+            # preserve verification + audit, bump versi only if content changed
+            base["diverifikasi_oleh"] = existing.get("diverifikasi_oleh")
+            base["diverifikasi_pada"] = existing.get("diverifikasi_pada")
+            base["versi"] = existing.get("versi", 1)
+            base["riwayat_perubahan"] = existing.get("riwayat_perubahan", [])
+            await db.baku_mutu_standar.update_one({"id": std["id"]}, {"$set": base})
+            std_upd += 1
+        else:
+            base["diverifikasi_oleh"] = None
+            base["diverifikasi_pada"] = None
+            base["versi"] = 1
+            base["riwayat_perubahan"] = [{
+                "aksi": "seed", "oleh": user["email"], "pada": now_iso(), "versi": 1,
+            }]
+            await db.baku_mutu_standar.insert_one(base)
+            std_add += 1
+
+    return {
+        "regulasi_ditambah": reg_add, "regulasi_diubah": reg_upd,
+        "standar_ditambah": std_add, "standar_diubah": std_upd,
+        "total_regulasi": await db.regulasi.count_documents({}),
+        "total_standar": await db.baku_mutu_standar.count_documents({}),
+    }
+
+
+@api.get("/baku-mutu/standar")
+async def list_standar(kategori: Optional[str] = None, q: str = "",
+                       user: dict = Depends(get_current_user)):
+    query = {"aktif": {"$ne": False}}
+    if kategori:
+        query["kategori"] = kategori
+    rows = await db.baku_mutu_standar.find(query, {"_id": 0}).to_list(2000)
+    regmap = await _regulasi_map()
+    if q:
+        toks = bm_logic.tokenize(q)
+        scored = []
+        for s in rows:
+            score, matched = bm_logic.score_standar(s, toks)
+            if score > 0:
+                scored.append((score, s))
+        scored.sort(key=lambda x: x[0], reverse=True)
+        rows = [s for _, s in scored]
+    for s in rows:
+        reg = regmap.get(s.get("regulasi_id"), {})
+        s["regulasi"] = {"id": reg.get("id"), "judul": reg.get("judul"), "status": reg.get("status")}
+        s["regulasi_dicabut"] = (reg.get("status") == "dicabut")
+    return rows
+
+
+@api.get("/baku-mutu/saran")
+async def saran_baku_mutu(kategori: Optional[str] = None, q: str = "",
+                          debit: Optional[float] = None, bahan_bakar: Optional[str] = None,
+                          kapasitas_kw: Optional[float] = None,
+                          user: dict = Depends(get_current_user)):
+    rows = await db.baku_mutu_standar.find({"aktif": {"$ne": False}}, {"_id": 0}).to_list(2000)
+    regmap = await _regulasi_map()
+    ranked = bm_logic.rank_suggestions(
+        rows, regmap, kategori=kategori, q=q, debit=debit,
+        bahan_bakar=bahan_bakar, kapasitas_kw=kapasitas_kw,
+    )
+    # variant hint: multiple results sharing a sektor while no discriminator given
+    perlu_pilih = debit is None and kapasitas_kw is None and not bahan_bakar
+    return {"hasil": ranked, "perlu_pilih_varian": perlu_pilih, "jumlah": len(ranked)}
+
+
+@api.post("/titik/{point_id}/terapkan-baku-mutu")
+async def terapkan_baku_mutu(point_id: str, body: TerapkanBakuMutuBody,
+                             company_id: str = Depends(get_company_id),
+                             user: dict = Depends(require_roles(COMPANY_ADMIN, HRGA, SWARNA_ADMIN))):
+    point = await db.monitoring_points.find_one({"id": point_id, "company_id": company_id})
+    if not point:
+        raise HTTPException(status_code=404, detail="Titik penaatan tidak ditemukan")
+    std = await db.baku_mutu_standar.find_one({"id": body.standar_id}, {"_id": 0})
+    if not std:
+        raise HTTPException(status_code=404, detail="Standar baku mutu tidak ditemukan")
+    params = [bm_logic.map_seed_param(sp, new_id) for sp in std.get("parameter", [])]
+    reg = await db.regulasi.find_one({"id": std.get("regulasi_id")}, {"_id": 0}) or {}
+    snapshot = {
+        "standar_id": std["id"], "sektor": std.get("sektor"),
+        "sub_kategori": std.get("sub_kategori"), "kategori": std.get("kategori"),
+        "regulasi": {"id": reg.get("id"), "judul": reg.get("judul"), "status": reg.get("status")},
+        "perlu_verifikasi": bool(std.get("perlu_verifikasi")),
+        "kuantitas_air_limbah_maks": std.get("kuantitas_air_limbah_maks", []),
+        "diterapkan_pada": now_iso(), "diterapkan_oleh": user["email"],
+    }
+    await db.monitoring_points.update_one({"id": point_id}, {"$set": {
+        "parameters": params, "standar_id": std["id"], "snapshot_standar": snapshot,
+        "sumber_baku_mutu": "saran_otomatis", "kategori": std.get("kategori"),
+    }})
+    return await db.monitoring_points.find_one({"id": point_id}, {"_id": 0})
+
+
+# ----- admin management of standards -----
+@api.get("/admin/baku-mutu/standar")
+async def admin_list_standar(perlu_verifikasi: Optional[bool] = None, kategori: Optional[str] = None,
+                             user: dict = Depends(require_roles(SWARNA_ADMIN))):
+    query = {}
+    if perlu_verifikasi is not None:
+        query["perlu_verifikasi"] = perlu_verifikasi
+    if kategori:
+        query["kategori"] = kategori
+    rows = await db.baku_mutu_standar.find(query, {"_id": 0}).sort("id", 1).to_list(2000)
+    regmap = await _regulasi_map()
+    for s in rows:
+        reg = regmap.get(s.get("regulasi_id"), {})
+        s["regulasi"] = {"id": reg.get("id"), "judul": reg.get("judul"), "status": reg.get("status")}
+    return rows
+
+
+@api.get("/admin/baku-mutu/regulasi")
+async def admin_list_regulasi(user: dict = Depends(require_roles(SWARNA_ADMIN))):
+    return await db.regulasi.find({}, {"_id": 0}).sort("id", 1).to_list(1000)
+
+
+class StandarEditBody(BaseModel):
+    parameter: Optional[list] = None
+    catatan: Optional[str] = None
+    aktif: Optional[bool] = None
+    perlu_verifikasi: Optional[bool] = None
+
+
+@api.put("/admin/baku-mutu/standar/{standar_id}")
+async def admin_edit_standar(standar_id: str, body: StandarEditBody,
+                             user: dict = Depends(require_roles(SWARNA_ADMIN))):
+    std = await db.baku_mutu_standar.find_one({"id": standar_id}, {"_id": 0})
+    if not std:
+        raise HTTPException(status_code=404, detail="Standar tidak ditemukan")
+    upd = {k: v for k, v in body.model_dump().items() if v is not None}
+    if not upd:
+        return std
+    versi = std.get("versi", 1) + 1
+    entry = {"aksi": "edit", "oleh": user["email"], "pada": now_iso(), "versi": versi,
+             "perubahan": list(upd.keys())}
+    upd["versi"] = versi
+    await db.baku_mutu_standar.update_one({"id": standar_id}, {
+        "$set": upd, "$push": {"riwayat_perubahan": entry}})
+    await db.baku_mutu_audit.insert_one({"id": new_id(), "standar_id": standar_id, **entry})
+    return await db.baku_mutu_standar.find_one({"id": standar_id}, {"_id": 0})
+
+
+@api.post("/admin/baku-mutu/standar/{standar_id}/verifikasi")
+async def admin_verify_standar(standar_id: str, user: dict = Depends(require_roles(SWARNA_ADMIN))):
+    std = await db.baku_mutu_standar.find_one({"id": standar_id}, {"_id": 0})
+    if not std:
+        raise HTTPException(status_code=404, detail="Standar tidak ditemukan")
+    versi = std.get("versi", 1) + 1
+    entry = {"aksi": "verifikasi", "oleh": user["email"], "pada": now_iso(), "versi": versi}
+    await db.baku_mutu_standar.update_one({"id": standar_id}, {
+        "$set": {"diverifikasi_oleh": user["email"], "diverifikasi_pada": now_iso(),
+                 "perlu_verifikasi": False, "versi": versi},
+        "$push": {"riwayat_perubahan": entry}})
+    await db.baku_mutu_audit.insert_one({"id": new_id(), "standar_id": standar_id, **entry})
+    return await db.baku_mutu_standar.find_one({"id": standar_id}, {"_id": 0})
+
+
+@api.get("/admin/baku-mutu/audit")
+async def admin_audit(user: dict = Depends(require_roles(SWARNA_ADMIN))):
+    return await db.baku_mutu_audit.find({}, {"_id": 0}).sort("pada", -1).to_list(500)
+
 
 
 # ----------------------------- notification log -----------------------------

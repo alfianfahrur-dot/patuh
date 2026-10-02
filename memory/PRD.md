@@ -52,3 +52,25 @@ lhu (TestReports: file ref + results[]), labs, notification_log, invitations, se
 ## Known / Notes
 - WhatsApp reminders are MODULAR & DISABLED by default (email-only) until admin configures gateway.
 - Email delivery via Resend works; transient 429 can occur under heavy concurrent sends.
+
+## Feature: Saran Baku Mutu (2026-10-02)
+- Data: backend/baku_mutu_seed.json (6 regulasi, 108 standar: 95 air_limbah, 12 emisi, 1 udara_ambien). Numbers kept verbatim.
+- Collections: regulasi, baku_mutu_standar (fields aktif, diverifikasi_oleh/pada, versi, riwayat_perubahan), baku_mutu_audit.
+- Backend (backend/baku_mutu.py pure logic + server.py endpoints):
+  POST /api/admin/baku-mutu/seed (idempotent upsert, preserves verification on re-seed);
+  GET /api/baku-mutu/standar?kategori=&q=; GET /api/baku-mutu/saran?kategori=&q=&debit=&bahan_bakar=&kapasitas_kw=
+  (ranked + alasan_cocok + regulasi status + perlu_verifikasi + perlu_pilih_varian; debit variant selection for
+  domestik >50/3-50/<=3 and tekstil <100/100-1000/>1000; fuel/capacity soft match for genset/boiler);
+  POST /api/titik/{id}/terapkan-baku-mutu (snapshot params into point + standar_id + sumber_baku_mutu);
+  admin mgmt: list/edit/verifikasi/regulasi/audit.
+- Point parameter extended (additive): kode, tipe(maks|rentang|negatif), teks, periode, override, alasan;
+  point: standar_id, snapshot_standar, sumber_baku_mutu(saran_otomatis|manual|persetujuan_teknis), sumber_catatan, kategori.
+- Evaluation upgrade: statuses sesuai|mendekati(>=ambang*batas, default 80%, per-company ambang_peringatan_persen)|melebihi,
+  + rentang(pH), negatif(Negatif), LOQ/"tidak terdeteksi"->sesuai, unit-mismatch guard. _compliance fails only on melebihi.
+- Frontend: Sites point dialog has BakuMutuSuggest panel (search by kegiatan + debit/fuel/kW, cards with regulasi badge,
+  perlu_verifikasi banner, revoked warning, param table, Terapkan) + baku-mutu-khusus override w/ wajib sumber + disclaimer.
+  Admin has "Baku Mutu" tab (seed, list, filter perlu-verifikasi, verifikasi, audit).
+- Tests: backend/tests/test_baku_mutu.py (12 pass), backend/validate_seed.py (pass, no dup ids, refs valid).
+- MANUAL VERIFICATION PENDING: 32 standar flagged perlu_verifikasi=true (esp. domestik 11/2025 merged-cell extraction,
+  tekstil 12/2025 secondary-source numbers) — must be checked against official PDFs before use for reporting.
+- Out of scope (design-ready via seed/admin): most beban-pencemaran sectors, mining/migas/PLTU/semen emisi, baku mutu daerah.

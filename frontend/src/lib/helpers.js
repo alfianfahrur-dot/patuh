@@ -1,7 +1,8 @@
-export const JENIS_LABEL = { air_limbah: "Air Limbah", emisi: "Emisi Udara" };
+export const JENIS_LABEL = { air_limbah: "Air Limbah", emisi: "Emisi Udara", udara_ambien: "Udara Ambien" };
 export const JENIS_OPTIONS = [
   { value: "air_limbah", label: "Air Limbah (IPAL / Outlet)" },
   { value: "emisi", label: "Emisi Udara (Cerobong)" },
+  { value: "udara_ambien", label: "Udara Ambien" },
 ];
 export const FREKUENSI_OPTIONS = [
   { value: 1, label: "Bulanan (tiap 1 bulan)" },

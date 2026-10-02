@@ -11,7 +11,7 @@ import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter,
 } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Building2, Plus, Copy, MessageCircle, Send, Shield } from "lucide-react";
+import { Building2, Plus, Copy, MessageCircle, Send, Shield, FlaskConical, CheckCircle2, Database } from "lucide-react";
 
 export default function Admin() {
   const [companies, setCompanies] = useState([]);
@@ -20,6 +20,40 @@ export default function Admin() {
   const [lastLink, setLastLink] = useState("");
   const [wa, setWa] = useState({ enabled: false, api_url: "", api_key: "", sender_number: "", configured: false });
   const [sending, setSending] = useState(false);
+  const [bmStd, setBmStd] = useState([]);
+  const [bmOnlyVerif, setBmOnlyVerif] = useState(false);
+  const [bmAudit, setBmAudit] = useState([]);
+  const [seeding, setSeeding] = useState(false);
+
+  const loadBakuMutu = async () => {
+    try {
+      const params = bmOnlyVerif ? { perlu_verifikasi: true } : {};
+      const [s, a] = await Promise.all([
+        api.get("/admin/baku-mutu/standar", { params }),
+        api.get("/admin/baku-mutu/audit"),
+      ]);
+      setBmStd(s.data); setBmAudit(a.data);
+    } catch (e) { toast.error(apiError(e)); }
+  };
+  useEffect(() => { loadBakuMutu(); }, [bmOnlyVerif]);
+
+  const runSeed = async () => {
+    setSeeding(true);
+    try {
+      const { data } = await api.post("/admin/baku-mutu/seed");
+      toast.success(`Seed selesai: ${data.total_standar} standar, ${data.total_regulasi} regulasi (ditambah ${data.standar_ditambah}, diubah ${data.standar_diubah}).`);
+      loadBakuMutu();
+    } catch (e) { toast.error(apiError(e)); }
+    finally { setSeeding(false); }
+  };
+
+  const verifyStandar = async (id) => {
+    try {
+      await api.post(`/admin/baku-mutu/standar/${id}/verifikasi`);
+      toast.success("Standar ditandai terverifikasi");
+      loadBakuMutu();
+    } catch (e) { toast.error(apiError(e)); }
+  };
 
   const load = async () => {
     const [c, w] = await Promise.all([api.get("/companies"), api.get("/settings/whatsapp")]);
@@ -75,6 +109,7 @@ export default function Admin() {
           <TabsTrigger value="companies" data-testid="tab-companies">Perusahaan</TabsTrigger>
           <TabsTrigger value="whatsapp" data-testid="tab-whatsapp">WhatsApp Gateway</TabsTrigger>
           <TabsTrigger value="reminders" data-testid="tab-reminders">Pengingat</TabsTrigger>
+          <TabsTrigger value="bakumutu" data-testid="tab-bakumutu">Baku Mutu</TabsTrigger>
         </TabsList>
 
         <TabsContent value="companies" className="mt-5 space-y-4">
@@ -153,6 +188,70 @@ export default function Admin() {
             <Button data-testid="run-reminders-button" onClick={runReminders} disabled={sending} className="bg-[#064E3B] text-white">
               <Send className="h-4 w-4 mr-1" /> {sending ? "Memproses…" : "Jalankan Pengecekan Sekarang"}
             </Button>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="bakumutu" className="mt-5 space-y-4">
+          <div className="bg-white rounded-2xl border border-slate-200 p-5">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div className="flex items-center gap-2">
+                <Database className="h-5 w-5 text-emerald-700" />
+                <div>
+                  <h2 className="font-head font-semibold text-emerald-950">Pustaka Baku Mutu</h2>
+                  <p className="text-xs text-slate-500">{bmStd.length} standar dimuat. Jalankan seed untuk memuat/memperbarui dari peraturan.</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Button size="sm" variant="outline" onClick={() => setBmOnlyVerif((v) => !v)} data-testid="bm-filter-verif">
+                  {bmOnlyVerif ? "Tampilkan semua" : "Hanya perlu verifikasi"}
+                </Button>
+                <Button size="sm" onClick={runSeed} disabled={seeding} data-testid="bm-seed-button" className="bg-[#064E3B] hover:bg-[#022C22] text-white">
+                  {seeding ? "Menyeed…" : "Jalankan Seed"}
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden" data-testid="bm-standar-list">
+            <div className="max-h-[480px] overflow-y-auto divide-y divide-slate-100">
+              {bmStd.length === 0 && <p className="text-sm text-slate-400 p-5">Belum ada standar. Jalankan seed terlebih dahulu.</p>}
+              {bmStd.map((s) => (
+                <div key={s.id} className="px-4 py-3 flex items-start justify-between gap-3" data-testid={`bm-std-${s.id}`}>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <FlaskConical className="h-4 w-4 text-emerald-700 shrink-0" />
+                      <span className="font-semibold text-emerald-950 text-sm">{s.sektor}</span>
+                      <Badge className="bg-slate-100 text-slate-600 text-[10px]">{s.kategori}</Badge>
+                      {s.perlu_verifikasi
+                        ? <Badge className="bg-amber-100 text-amber-800 text-[10px]">Perlu verifikasi</Badge>
+                        : <Badge className="bg-emerald-100 text-emerald-800 text-[10px]">Terverifikasi/OK</Badge>}
+                    </div>
+                    <div className="text-xs text-slate-500 mt-0.5">{s.sub_kategori}</div>
+                    <div className="text-[11px] text-slate-400 mt-0.5">{s.regulasi?.judul} · {(s.parameter || []).length} parameter</div>
+                    {s.diverifikasi_pada && <div className="text-[11px] text-emerald-600 mt-0.5">Diverifikasi oleh {s.diverifikasi_oleh}</div>}
+                  </div>
+                  {s.perlu_verifikasi && (
+                    <Button size="sm" variant="outline" onClick={() => verifyStandar(s.id)} data-testid={`bm-verify-${s.id}`} className="shrink-0">
+                      <CheckCircle2 className="h-4 w-4 mr-1" /> Verifikasi
+                    </Button>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl border border-slate-200 p-5">
+            <h3 className="font-head font-semibold text-emerald-950 text-sm mb-2">Riwayat Perubahan (Audit)</h3>
+            {bmAudit.length === 0 && <p className="text-xs text-slate-400">Belum ada aktivitas.</p>}
+            <div className="space-y-1.5 max-h-[220px] overflow-y-auto">
+              {bmAudit.map((a) => (
+                <div key={a.id} className="text-xs text-slate-600 flex items-center gap-2" data-testid={`bm-audit-${a.id}`}>
+                  <Badge className="bg-slate-100 text-slate-600 text-[10px]">{a.aksi}</Badge>
+                  <span className="font-medium">{a.standar_id}</span>
+                  <span className="text-slate-400">oleh {a.oleh} · {formatDate(a.pada)}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </TabsContent>
       </Tabs>

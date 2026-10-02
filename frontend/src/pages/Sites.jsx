@@ -10,8 +10,16 @@ import {
 } from "@/components/ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Plus, MapPin, Trash2, Droplets, Factory, X, Pencil } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import BakuMutuSuggest from "@/components/BakuMutuSuggest";
 
-const emptyParam = () => ({ nama: "", satuan: "", baku_mutu: "", baku_mutu_min: "" });
+const emptyParam = () => ({ nama: "", satuan: "", baku_mutu: "", baku_mutu_min: "", kode: null, tipe: "maks", teks: null, periode: null });
+
+const SUMBER_LABEL = {
+  saran_otomatis: "Saran otomatis",
+  manual: "Manual",
+  persetujuan_teknis: "Baku mutu khusus (Pertek/Pergub)",
+};
 
 export default function Sites() {
   const [sites, setSites] = useState([]);
@@ -22,7 +30,7 @@ export default function Sites() {
   const [pointOpen, setPointOpen] = useState(false);
   const [editing, setEditing] = useState(null);
 
-  const [pForm, setPForm] = useState({ site_id: "", name: "", jenis: "air_limbah", frekuensi_bulan: 6, tanggal_uji_terakhir: "", parameters: [emptyParam()] });
+  const [pForm, setPForm] = useState({ site_id: "", name: "", jenis: "air_limbah", frekuensi_bulan: 6, tanggal_uji_terakhir: "", parameters: [emptyParam()], standar_id: null, sumber_baku_mutu: "manual" });
 
   const load = async () => {
     try {
@@ -48,7 +56,7 @@ export default function Sites() {
 
   const openNewPoint = (siteId) => {
     setEditing(null);
-    setPForm({ site_id: siteId || sites[0]?.id || "", name: "", jenis: "air_limbah", frekuensi_bulan: 6, tanggal_uji_terakhir: "", parameters: [emptyParam()] });
+    setPForm({ site_id: siteId || sites[0]?.id || "", name: "", jenis: "air_limbah", frekuensi_bulan: 6, tanggal_uji_terakhir: "", parameters: [emptyParam()], standar_id: null, sumber_baku_mutu: "manual" });
     setPointOpen(true);
   };
 
@@ -57,13 +65,30 @@ export default function Sites() {
     setPForm({
       site_id: p.site_id, name: p.name, jenis: p.jenis, frekuensi_bulan: p.frekuensi_bulan,
       tanggal_uji_terakhir: p.tanggal_uji_terakhir || "",
-      parameters: (p.parameters || []).map((x) => ({ nama: x.nama, satuan: x.satuan || "", baku_mutu: x.baku_mutu ?? "", baku_mutu_min: x.baku_mutu_min ?? "" })),
+      standar_id: p.standar_id || null,
+      sumber_baku_mutu: p.sumber_baku_mutu || "manual",
+      parameters: (p.parameters || []).map((x) => ({
+        nama: x.nama, satuan: x.satuan || "", baku_mutu: x.baku_mutu ?? "", baku_mutu_min: x.baku_mutu_min ?? "",
+        kode: x.kode ?? null, tipe: x.tipe || "maks", teks: x.teks ?? null, periode: x.periode ?? null,
+      })),
     });
     setPointOpen(true);
   };
 
+  const applySuggestion = (s) => {
+    const params = (s.parameter || []).map((p) => ({
+      nama: p.nama, satuan: p.satuan || "",
+      baku_mutu: p.maks ?? "", baku_mutu_min: p.min ?? "",
+      kode: p.kode ?? null, tipe: p.tipe || "maks", teks: p.teks ?? null, periode: p.periode ?? null,
+    }));
+    setPForm((f) => ({ ...f, parameters: params.length ? params : [emptyParam()], standar_id: s.id, sumber_baku_mutu: "saran_otomatis" }));
+  };
+
   const savePoint = async () => {
     if (!pForm.site_id || !pForm.name) { toast.error("Lengkapi site & nama titik"); return; }
+    if (pForm.sumber_baku_mutu === "persetujuan_teknis" && !(pForm.sumber_catatan || "").trim()) {
+      toast.error("Isi sumber baku mutu khusus (Pertek/Pergub)"); return;
+    }
     const payload = {
       ...pForm,
       frekuensi_bulan: Number(pForm.frekuensi_bulan),
@@ -72,6 +97,8 @@ export default function Sites() {
         nama: p.nama, satuan: p.satuan,
         baku_mutu: p.baku_mutu === "" ? null : Number(p.baku_mutu),
         baku_mutu_min: p.baku_mutu_min === "" ? null : Number(p.baku_mutu_min),
+        kode: p.kode || null, tipe: p.tipe || "maks", teks: p.teks || null, periode: p.periode || null,
+        override: !!p.override, alasan: p.alasan || null,
       })),
     };
     try {
@@ -210,13 +237,29 @@ export default function Sites() {
               </div>
             </div>
 
+            <BakuMutuSuggest kategori={pForm.jenis} onApply={applySuggestion} />
+
             <div>
               <div className="flex items-center justify-between mb-2">
-                <Label>Parameter Wajib Uji & Baku Mutu</Label>
-                <Button size="sm" variant="outline" data-testid="add-param-button" onClick={() => setPForm({ ...pForm, parameters: [...pForm.parameters, emptyParam()] })}>
+                <div className="flex items-center gap-2">
+                  <Label>Parameter Wajib Uji & Baku Mutu</Label>
+                  <Badge className="bg-slate-100 text-slate-600 text-[10px]" data-testid="point-sumber-badge">{SUMBER_LABEL[pForm.sumber_baku_mutu] || "Manual"}</Badge>
+                </div>
+                <Button size="sm" variant="outline" data-testid="add-param-button" onClick={() => setPForm({ ...pForm, parameters: [...pForm.parameters, emptyParam()], sumber_baku_mutu: pForm.standar_id ? "manual" : pForm.sumber_baku_mutu, standar_id: null })}>
                   <Plus className="h-3.5 w-3.5 mr-1" /> Parameter
                 </Button>
               </div>
+              {pForm.sumber_baku_mutu === "saran_otomatis" && (
+                <div className="mb-2 text-xs text-slate-500">
+                  Mengisi dari saran otomatis. Anda bisa pakai <button type="button" onClick={() => setPForm({ ...pForm, sumber_baku_mutu: "persetujuan_teknis" })} className="text-emerald-700 font-medium underline">baku mutu khusus</button> (Pertek/Pergub lebih ketat) bila perlu.
+                </div>
+              )}
+              {pForm.sumber_baku_mutu === "persetujuan_teknis" && (
+                <div className="mb-2">
+                  <Label className="text-xs text-amber-700">Sumber baku mutu khusus (wajib — mis. No. Persetujuan Teknis / Pergub)</Label>
+                  <Input data-testid="point-sumber-catatan" value={pForm.sumber_catatan || ""} onChange={(e) => setPForm({ ...pForm, sumber_catatan: e.target.value })} placeholder="mis. Pertek No. 123/2025" className="mt-1" />
+                </div>
+              )}
               <div className="space-y-2">
                 {pForm.parameters.map((p, i) => (
                   <div key={i} className="grid grid-cols-12 gap-2 items-center" data-testid={`param-row-${i}`}>

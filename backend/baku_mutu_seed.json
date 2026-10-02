@@ -1,0 +1,9180 @@
+{
+ "meta": {
+  "nama": "PATUH - seed baku mutu",
+  "disusun": "2026-10-02",
+  "versi": "1.0",
+  "bahasa": "id",
+  "peringatan": "Dikompilasi dari naskah peraturan dan sumber sekunder. Entri dengan perlu_verifikasi=true wajib dicek ke naskah resmi sebelum dipakai untuk pelaporan. Baku mutu daerah (Pergub/Perda), Persetujuan Teknis, dan dokumen lingkungan perusahaan dapat lebih ketat dan harus didahulukan. Bukan nasihat hukum.",
+  "belum_tercakup": {
+   "air_limbah": [
+    "Beban pencemaran (kg/ton) tidak disertakan kecuali pupuk",
+    "Pertambangan",
+    "Migas & panas bumi (Permen LH 19/2010)",
+    "Lindi TPA (P.59/2016)",
+    "Pakan ternak/akuakultur (Permen LH/BPLH 2/2026)",
+    "Kawasan industri (IPAL terpusat) selain yang tercantum",
+    "Baku mutu daerah"
+   ],
+   "emisi": [
+    "PLTU/pembangkit termal (P.15/2019)",
+    "Migas (13/2009)",
+    "Pertambangan (4/2014)",
+    "Semen (P.19/2017)",
+    "Pupuk (P.17/2019)",
+    "Keramik (17/2008)",
+    "Carbon black (18/2008)",
+    "Pengolahan sampah termal (P.70/2016)",
+    "Industri lain yang punya BME khusus"
+   ]
+  }
+ },
+ "regulasi": [
+  {
+   "id": "PERMEN_LH_BPLH_11_2025",
+   "judul": "Permen LH/BPLH No. 11 Tahun 2025 - Baku Mutu Air Limbah dan Standar Teknologi Pengolahan Air Limbah untuk Air Limbah Domestik",
+   "status": "berlaku",
+   "berlaku_mulai": "2025-09-09",
+   "mencabut": [
+    "Permen LHK P.68/MENLHK/SETJEN/KUM.1/8/2016",
+    "Ketentuan air limbah domestik & saniter dalam Lampiran I.A angka 3 dan 4 Permen LH 19/2010"
+   ],
+   "catatan": "Transisi: yang sudah punya Persetujuan Teknis/SPPL wajib menyesuaikan paling lama 2 tahun sejak berlaku (sekitar 9 Sep 2027). Parameter total coliform diganti fecal coliform.",
+   "sumber": [
+    "https://jdih.kemenlh.go.id/admin/storage/dokumen_hukum/68d3f18d1b3d7.pdf",
+    "https://peraturan.bpk.go.id/Details/345620/permen-lhbplh-no-11-tahun-2025"
+   ]
+  },
+  {
+   "id": "PERMEN_LH_BPLH_12_2025",
+   "judul": "Permen LH/BPLH No. 12 Tahun 2025 - Baku Mutu Air Limbah bagi Usaha dan/atau Kegiatan Tekstil",
+   "status": "berlaku",
+   "berlaku_mulai": "2025-09-09",
+   "mencabut": [
+    "Lampiran XLII Permen LH 5/2014",
+    "Pasal 16A Permen LH 5/2014 (sisipan P.16/2019)"
+   ],
+   "catatan": "Baku mutu berjenjang menurut debit.",
+   "sumber": [
+    "https://peraturan.bpk.go.id/Details/345623/permen-lhbplh-no-12-tahun-2025"
+   ]
+  },
+  {
+   "id": "PERMEN_LH_5_2014",
+   "judul": "Permen LH No. 5 Tahun 2014 - Baku Mutu Air Limbah (beserta perubahan)",
+   "status": "berlaku_sebagian",
+   "berlaku_mulai": "2014-11-25",
+   "catatan": "Diubah P.21/2018 (penyamakan kulit) dan P.16/2019 (tekstil, kini digantikan 12/2025). Lampiran XLIII (hotel), XLIV huruf A (fasyankes domestik), XLVI (domestik) dicabut P.68/2016, yang kini digantikan 11/2025.",
+   "sumber": [
+    "https://jdih.maritim.go.id/cfind/source/files/permen-lhk/mlh-p.5.pdf"
+   ]
+  },
+  {
+   "id": "PERMEN_LH_7_2007",
+   "judul": "Permen LH No. 7 Tahun 2007 - Baku Mutu Emisi Sumber Tidak Bergerak bagi Ketel Uap",
+   "status": "berlaku",
+   "berlaku_mulai": "2007-05-08",
+   "catatan": "Cek apakah ada baku mutu emisi yang lebih ketat dari Pergub/izin setempat (mis. Pergub Jatim 10/2009).",
+   "sumber": [
+    "https://jdih.kehutanan.go.id/new2/uploads/files/p.7.pdf"
+   ]
+  },
+  {
+   "id": "PERMEN_LHK_11_2021",
+   "judul": "Permen LHK No. 11 Tahun 2021 - Baku Mutu Emisi Mesin dengan Pembakaran Dalam",
+   "status": "berlaku",
+   "berlaku_mulai": "2021-05-24",
+   "catatan": "Efektif wajib dipenuhi sejak 1 Mei 2022.",
+   "sumber": [
+    "https://peraturan.bpk.go.id/Details/235328/permen-lhk-no-11-tahun-2021"
+   ]
+  },
+  {
+   "id": "PP_22_2021_LAMP_VII",
+   "judul": "PP No. 22 Tahun 2021 Lampiran VII - Baku Mutu Udara Ambien Nasional",
+   "status": "berlaku",
+   "berlaku_mulai": "2021-02-02",
+   "catatan": "Menggantikan PP 41/1999.",
+   "sumber": [
+    "https://peraturan.bpk.go.id/Details/161852/ppno-22-tahun-2021"
+   ]
+  }
+ ],
+ "standar": [
+  {
+   "id": "AL-DOM-NK-MA-GT50",
+   "regulasi_id": "PERMEN_LH_BPLH_11_2025",
+   "kategori": "air_limbah",
+   "sektor": "Air limbah domestik",
+   "sub_kategori": "Nonkakus / gabungan kakus+nonkakus -> media air (volume > 50 m3/hari)",
+   "kondisi_penerapan": "Volume air limbah domestik > 50 m3/hari",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Detergen",
+     "nama": "Deterjen total (MBAS), khusus laundry",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "SisaCl2",
+     "nama": "Sisa klorin (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "FC",
+     "nama": "Fecal coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1000
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Deterjen hanya untuk kegiatan laundry. Sisa klorin diukur langsung di titik penaatan. Sel tabel yang digabung (merged) pada lampiran diinterpretasikan dari hasil ekstraksi teks PDF; cek ulang terhadap PDF resmi.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "50",
+    "air",
+    "apartemen",
+    "asrama",
+    "domestik",
+    "gabungan",
+    "gedung",
+    "hari",
+    "hotel",
+    "ipal",
+    "kakus",
+    "klinik",
+    "laundry",
+    "limbah",
+    "m3",
+    "makan",
+    "mall",
+    "media",
+    "nonkakus",
+    "perkantoran",
+    "puskesmas",
+    "restoran",
+    "rs",
+    "rumah",
+    "sakit",
+    "sekolah",
+    "stp",
+    "volume"
+   ]
+  },
+  {
+   "id": "AL-DOM-NK-MA-3-50",
+   "regulasi_id": "PERMEN_LH_BPLH_11_2025",
+   "kategori": "air_limbah",
+   "sektor": "Air limbah domestik",
+   "sub_kategori": "Nonkakus / gabungan kakus+nonkakus -> media air (3 < volume <= 50 m3/hari)",
+   "kondisi_penerapan": "3 < volume <= 50 m3/hari",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Detergen",
+     "nama": "Deterjen total (MBAS), khusus laundry",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "SisaCl2",
+     "nama": "Sisa klorin (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "FC",
+     "nama": "Fecal coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1000
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Sel tabel yang digabung (merged) pada lampiran diinterpretasikan dari hasil ekstraksi teks PDF; cek ulang terhadap PDF resmi.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "3",
+    "50",
+    "air",
+    "apartemen",
+    "asrama",
+    "domestik",
+    "gabungan",
+    "gedung",
+    "hari",
+    "hotel",
+    "ipal",
+    "kakus",
+    "klinik",
+    "laundry",
+    "limbah",
+    "m3",
+    "makan",
+    "mall",
+    "media",
+    "nonkakus",
+    "perkantoran",
+    "puskesmas",
+    "restoran",
+    "rs",
+    "rumah",
+    "sakit",
+    "sekolah",
+    "stp",
+    "volume"
+   ]
+  },
+  {
+   "id": "AL-DOM-NK-MA-LE3",
+   "regulasi_id": "PERMEN_LH_BPLH_11_2025",
+   "kategori": "air_limbah",
+   "sektor": "Air limbah domestik",
+   "sub_kategori": "Nonkakus / gabungan kakus+nonkakus -> media air (volume <= 3 m3/hari)",
+   "kondisi_penerapan": "Volume <= 3 m3/hari",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Detergen",
+     "nama": "Deterjen total (MBAS), khusus laundry",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "SisaCl2",
+     "nama": "Sisa klorin (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "FC",
+     "nama": "Fecal coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1000
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Sel tabel yang digabung (merged) pada lampiran diinterpretasikan dari hasil ekstraksi teks PDF; cek ulang terhadap PDF resmi.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "3",
+    "air",
+    "apartemen",
+    "asrama",
+    "domestik",
+    "gabungan",
+    "gedung",
+    "hari",
+    "hotel",
+    "ipal",
+    "kakus",
+    "klinik",
+    "laundry",
+    "limbah",
+    "m3",
+    "makan",
+    "mall",
+    "media",
+    "nonkakus",
+    "perkantoran",
+    "puskesmas",
+    "restoran",
+    "rs",
+    "rumah",
+    "sakit",
+    "sekolah",
+    "stp",
+    "volume"
+   ]
+  },
+  {
+   "id": "AL-DOM-KAKUS-IPLT",
+   "regulasi_id": "PERMEN_LH_BPLH_11_2025",
+   "kategori": "air_limbah",
+   "sektor": "Air limbah domestik",
+   "sub_kategori": "Air limbah kakus pada IPLT terpadu -> media air",
+   "kondisi_penerapan": "IPLT terpadu",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "FC",
+     "nama": "Fecal coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1000
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "air",
+    "domestik",
+    "iplt",
+    "kakus",
+    "limbah",
+    "lumpur",
+    "media",
+    "pada",
+    "terpadu",
+    "tinja"
+   ]
+  },
+  {
+   "id": "AL-DOM-DRAINASE-IRIGASI",
+   "regulasi_id": "PERMEN_LH_BPLH_11_2025",
+   "kategori": "air_limbah",
+   "sektor": "Air limbah domestik",
+   "sub_kategori": "Nonkakus -> drainase / saluran irigasi",
+   "kondisi_penerapan": "Pembuangan ke drainase atau irigasi",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 12
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 80
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "FC",
+     "nama": "Fecal coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "SisaCl2",
+     "nama": "Sisa klorin (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Sisa klorin berlaku bila memakai klorinasi. Pasal 13: larangan buang ke drainase/irigasi pada Permen LHK 5/2021 dikecualikan bagi yang memenuhi Pasal 7-10.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "air",
+    "apartemen",
+    "asrama",
+    "domestik",
+    "drainase",
+    "gedung",
+    "hotel",
+    "ipal",
+    "irigasi",
+    "klinik",
+    "laundry",
+    "limbah",
+    "makan",
+    "mall",
+    "nonkakus",
+    "perkantoran",
+    "puskesmas",
+    "restoran",
+    "rs",
+    "rumah",
+    "sakit",
+    "saluran",
+    "sekolah",
+    "stp"
+   ]
+  },
+  {
+   "id": "AL-DOM-PEMANFAATAN-SIRAM",
+   "regulasi_id": "PERMEN_LH_BPLH_11_2025",
+   "kategori": "air_limbah",
+   "sektor": "Air limbah domestik",
+   "sub_kategori": "Pemanfaatan untuk penyiraman / pencucian",
+   "kondisi_penerapan": "Pemanfaatan air limbah domestik (non-fasyankes)",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 12
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 80
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "FC",
+     "nama": "Fecal coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "SisaCl2",
+     "nama": "Sisa klorin (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "air",
+    "daur",
+    "domestik",
+    "limbah",
+    "pemanfaatan",
+    "pencucian",
+    "penyiraman",
+    "reuse",
+    "ulang"
+   ]
+  },
+  {
+   "id": "AL-DOM-RESAPAN",
+   "regulasi_id": "PERMEN_LH_BPLH_11_2025",
+   "kategori": "air_limbah",
+   "sektor": "Air limbah domestik",
+   "sub_kategori": "Resapan di atas formasi / dalam formasi tertentu / imbuhan air tanah",
+   "kondisi_penerapan": "Pemanfaatan untuk resapan",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 6
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 40
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    },
+    {
+     "kode": "FC",
+     "nama": "Fecal coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "NO3N",
+     "nama": "Nitrat (NO3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Nitrat dinyatakan sebagai N.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "air",
+    "atas",
+    "dalam",
+    "domestik",
+    "formasi",
+    "imbuhan",
+    "injeksi",
+    "limbah",
+    "resapan",
+    "tanah",
+    "tertentu"
+   ]
+  },
+  {
+   "id": "AL-DOM-FASYANKES-TAMBAHAN",
+   "regulasi_id": "PERMEN_LH_BPLH_11_2025",
+   "kategori": "air_limbah",
+   "sektor": "Fasilitas pelayanan kesehatan",
+   "sub_kategori": "Parameter tambahan mikrobiologi (tambahkan ke baku mutu domestik yang sesuai)",
+   "kondisi_penerapan": "Fasyankes yang pengolahannya tidak terintegrasi dengan limbah B3 dan menjalankan SOP pengelolaan limbah B3. Berlaku pada kolom volume <= 50 m3/hari (media air) serta drainase/irigasi, pemanfaatan, dan resapan.",
+   "parameter": [
+    {
+     "kode": "Salmonela",
+     "nama": "Salmonela",
+     "satuan": "-",
+     "tipe": "negatif",
+     "min": null,
+     "maks": null,
+     "teks": "Negatif"
+    },
+    {
+     "kode": "Shigela",
+     "nama": "Shigela",
+     "satuan": "-",
+     "tipe": "negatif",
+     "min": null,
+     "maks": null,
+     "teks": "Negatif"
+    },
+    {
+     "kode": "Vibrio",
+     "nama": "Vibrio cholera",
+     "satuan": "-",
+     "tipe": "negatif",
+     "min": null,
+     "maks": null,
+     "teks": "Negatif"
+    },
+    {
+     "kode": "Strep",
+     "nama": "Streptococcus",
+     "satuan": "-",
+     "tipe": "negatif",
+     "min": null,
+     "maks": null,
+     "teks": "Negatif"
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Lampiran XLIV huruf A Permen LH 5/2014 sudah dicabut sejak P.68/2016; bagian domestik fasyankes kini mengikuti 11/2025.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "baku",
+    "domestik",
+    "fasilitas",
+    "fasyankes",
+    "kesehatan",
+    "klinik",
+    "mikrobiologi",
+    "mutu",
+    "parameter",
+    "pelayanan",
+    "puskesmas",
+    "rs",
+    "rumah",
+    "sakit",
+    "sesuai",
+    "tambahan",
+    "tambahkan"
+   ]
+  },
+  {
+   "id": "AL-FASYANKES-B3-TAMBAHAN",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Fasilitas pelayanan kesehatan",
+   "sub_kategori": "Tambahan bila mengolah limbah B3 (Lampiran XLIV B)",
+   "kondisi_penerapan": "Fasyankes yang mengolah limbah B3 dan hasilnya disalurkan ke IPAL; wajib memenuhi baku mutu domestik + parameter ini",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "Fe",
+     "nama": "Besi (Fe)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Mn",
+     "nama": "Mangan (Mn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Ba",
+     "nama": "Barium (Ba)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Cr6",
+     "nama": "Krom Heksavalen (Cr6+)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.002
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Sn",
+     "nama": "Stanum (Sn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "As",
+     "nama": "Arsen (As)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Se",
+     "nama": "Selenium (Se)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "Co",
+     "nama": "Kobalt (Co)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.4
+    },
+    {
+     "kode": "CN",
+     "nama": "Sianida (CN)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "F",
+     "nama": "Fluorida (F)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Cl2",
+     "nama": "Klorin bebas (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "NO3N",
+     "nama": "Nitrat (NO3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    },
+    {
+     "kode": "NO2N",
+     "nama": "Nitrit (NO2-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "MBAS",
+     "nama": "MBAS / surfaktan anionik",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "AOX",
+     "nama": "AOX",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "PCBs",
+     "nama": "PCBs",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.005
+    },
+    {
+     "kode": "PCDF",
+     "nama": "PCDFs",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "PCDD",
+     "nama": "PCDDs",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Satuan PCDFs/PCDDs ditulis mg/L pada naskah; kemungkinan salah cetak, cek dokumen asli. Lampiran ini bagian B yang tidak dicabut oleh P.68/2016.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "b",
+    "b3",
+    "bila",
+    "fasilitas",
+    "infeksius",
+    "kesehatan",
+    "klinik",
+    "lampiran",
+    "limbah",
+    "mengolah",
+    "pelayanan",
+    "rs",
+    "rumah",
+    "sakit",
+    "tambahan",
+    "xliv"
+   ]
+  },
+  {
+   "id": "AL-TEKSTIL-DEB-LT100",
+   "regulasi_id": "PERMEN_LH_BPLH_12_2025",
+   "kategori": "air_limbah",
+   "sektor": "Industri tekstil",
+   "sub_kategori": "Debit < 100 m3/hari",
+   "kondisi_penerapan": "Debit < 100 m3/hari",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "Warna",
+     "nama": "Warna (true colour)",
+     "satuan": "Pt-Co",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 8
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "SuhuDev",
+     "nama": "Deviasi suhu terhadap badan air",
+     "satuan": "°C",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk tekstil",
+     "nilai": 100,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Angka BOD/COD/TSS/pH/warna/krom dari ringkasan Permen LH/BPLH 12/2025 (sumber sekunder); fenol, amonia, sulfida, minyak-lemak, deviasi suhu, kuantitas diambil dari tabel P.16/2019 yang digantikan, dan belum diverifikasi ke naskah 12/2025.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "100",
+    "debit",
+    "dyeing",
+    "garmen",
+    "hari",
+    "industri",
+    "m3",
+    "pencelupan",
+    "printing",
+    "tekstil"
+   ]
+  },
+  {
+   "id": "AL-TEKSTIL-DEB-100-1000",
+   "regulasi_id": "PERMEN_LH_BPLH_12_2025",
+   "kategori": "air_limbah",
+   "sektor": "Industri tekstil",
+   "sub_kategori": "Debit 100 - 1.000 m3/hari",
+   "kondisi_penerapan": "Debit 100 - 1.000 m3/hari",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 45
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 125
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 40
+    },
+    {
+     "kode": "Warna",
+     "nama": "Warna (true colour)",
+     "satuan": "Pt-Co",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 8
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "SuhuDev",
+     "nama": "Deviasi suhu terhadap badan air",
+     "satuan": "°C",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk tekstil",
+     "nilai": 100,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Angka BOD/COD/TSS/pH/warna/krom dari ringkasan Permen LH/BPLH 12/2025 (sumber sekunder); fenol, amonia, sulfida, minyak-lemak, deviasi suhu, kuantitas diambil dari tabel P.16/2019 yang digantikan, dan belum diverifikasi ke naskah 12/2025.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "000",
+    "1",
+    "100",
+    "debit",
+    "dyeing",
+    "garmen",
+    "hari",
+    "industri",
+    "m3",
+    "pencelupan",
+    "printing",
+    "tekstil"
+   ]
+  },
+  {
+   "id": "AL-TEKSTIL-DEB-GT1000",
+   "regulasi_id": "PERMEN_LH_BPLH_12_2025",
+   "kategori": "air_limbah",
+   "sektor": "Industri tekstil",
+   "sub_kategori": "Debit > 1.000 m3/hari",
+   "kondisi_penerapan": "Debit > 1.000 m3/hari",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 35
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 115
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "Warna",
+     "nama": "Warna (true colour)",
+     "satuan": "Pt-Co",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 8
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "SuhuDev",
+     "nama": "Deviasi suhu terhadap badan air",
+     "satuan": "°C",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk tekstil",
+     "nilai": 100,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Angka BOD/COD/TSS/pH/warna/krom dari ringkasan Permen LH/BPLH 12/2025 (sumber sekunder); fenol, amonia, sulfida, minyak-lemak, deviasi suhu, kuantitas diambil dari tabel P.16/2019 yang digantikan, dan belum diverifikasi ke naskah 12/2025.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "000",
+    "1",
+    "debit",
+    "dyeing",
+    "garmen",
+    "hari",
+    "industri",
+    "m3",
+    "pencelupan",
+    "printing",
+    "tekstil"
+   ]
+  },
+  {
+   "id": "AL-IND-PELAPISAN-LOGAM",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pelapisan logam dan galvanis",
+   "sub_kategori": "Pelapisan logam",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Cr6",
+     "nama": "Krom Heksavalen (Cr6+)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "CN",
+     "nama": "Sianida (CN)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "Ag",
+     "nama": "Perak (Ag)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per m2 produk",
+     "nilai": 20,
+     "satuan": "L/m2"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "electroplating",
+    "galvanis",
+    "industri",
+    "logam",
+    "pelapisan",
+    "plating"
+   ]
+  },
+  {
+   "id": "AL-IND-GALVANIS",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pelapisan logam dan galvanis",
+   "sub_kategori": "Galvanisasi",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "CN",
+     "nama": "Sianida (CN)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "Ag",
+     "nama": "Perak (Ag)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per m2 produk",
+     "nilai": 2,
+     "satuan": "L/m2"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "galvanis",
+    "galvanisasi",
+    "galvanizing",
+    "industri",
+    "logam",
+    "pelapisan"
+   ]
+  },
+  {
+   "id": "AL-IND-KULIT-KROM",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Penyamakan kulit",
+   "sub_kategori": "Proses menggunakan krom",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 110
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.6
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "NTotal",
+     "nama": "Nitrogen Total (N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.8
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 40,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Lampiran II diubah oleh Permen LHK P.21/2018; angka di sini dari naskah asli 2014 dan BELUM diverifikasi terhadap perubahan.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "industri",
+    "krom",
+    "kulit",
+    "menggunakan",
+    "penyamakan",
+    "proses"
+   ]
+  },
+  {
+   "id": "AL-IND-KULIT-DAUN",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Penyamakan kulit",
+   "sub_kategori": "Proses menggunakan daun-daunan",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 70
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 180
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "NTotal",
+     "nama": "Nitrogen Total (N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 40,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Lampiran II diubah oleh Permen LHK P.21/2018; angka di sini dari naskah asli 2014 dan BELUM diverifikasi terhadap perubahan.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "daun",
+    "daunan",
+    "industri",
+    "kulit",
+    "menggunakan",
+    "penyamakan",
+    "proses"
+   ]
+  },
+  {
+   "id": "AL-IND-SAWIT",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Minyak sawit",
+   "sub_kategori": "Pabrik kelapa sawit (POME)",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 350
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 25
+    },
+    {
+     "kode": "NTotal",
+     "nama": "Nitrogen Total (N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk CPO",
+     "nilai": 2.5,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Naskah menulis 'm2' (salah ketik), diasumsikan m3.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "cpo",
+    "industri",
+    "kelapa",
+    "minyak",
+    "oil",
+    "pabrik",
+    "palm",
+    "pks",
+    "pome",
+    "sawit"
+   ]
+  },
+  {
+   "id": "AL-IND-KARET-LATEKS",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Karet",
+   "sub_kategori": "Lateks pekat",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "NTotal",
+     "nama": "Nitrogen Total (N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 25
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 40,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "karet",
+    "lateks",
+    "pekat"
+   ]
+  },
+  {
+   "id": "AL-IND-KARET-KERING",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Karet",
+   "sub_kategori": "Karet bentuk kering",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "NTotal",
+     "nama": "Nitrogen Total (N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 40,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "bentuk",
+    "crumb",
+    "industri",
+    "karet",
+    "kering",
+    "rubber"
+   ]
+  },
+  {
+   "id": "AL-IND-TAPIOKA",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Tapioka",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "CN",
+     "nama": "Sianida (CN)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 30,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "singkong",
+    "tapioka"
+   ]
+  },
+  {
+   "id": "AL-IND-MSG",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Monosodium glutamat (MSG)",
+   "sub_kategori": "MSG",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 80
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 50,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "glutamat",
+    "industri",
+    "monosodium",
+    "msg"
+   ]
+  },
+  {
+   "id": "AL-IND-IMP",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Inosin monofosfat (IMP)",
+   "sub_kategori": "IMP",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 80
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 750,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "imp",
+    "industri",
+    "inosin",
+    "monofosfat"
+   ]
+  },
+  {
+   "id": "AL-IND-KAYU-LAPIS",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Kayu lapis",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 125
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.25
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 4
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per m3 produk",
+     "nilai": 0.3,
+     "satuan": "m3/m3"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kayu",
+    "lapis",
+    "plywood"
+   ]
+  },
+  {
+   "id": "AL-IND-SUSU-DASAR",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan susu",
+   "sub_kategori": "Susu dasar",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 40
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton susu diolah",
+     "nilai": 1.5,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "dairy",
+    "dasar",
+    "industri",
+    "pengolahan",
+    "susu"
+   ]
+  },
+  {
+   "id": "AL-IND-SUSU-TERPADU",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan susu",
+   "sub_kategori": "Susu terpadu",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 40
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton susu diolah",
+     "nilai": 2.5,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "dairy",
+    "industri",
+    "pengolahan",
+    "susu",
+    "terpadu"
+   ]
+  },
+  {
+   "id": "AL-IND-MINUMAN-RINGAN",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Minuman ringan",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 6
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "pencucian botol + sirop",
+     "nilai": 3.5,
+     "satuan": "L/L produk"
+    },
+    {
+     "label": "pencucian botol, tanpa sirop",
+     "nilai": 2.8,
+     "satuan": "L/L produk"
+    },
+    {
+     "label": "tanpa pencucian botol, dengan sirop",
+     "nilai": 1.7,
+     "satuan": "L/L produk"
+    },
+    {
+     "label": "tanpa pencucian botol, tanpa sirop",
+     "nilai": 1.2,
+     "satuan": "L/L produk"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "air",
+    "amdk",
+    "bottling",
+    "dalam",
+    "industri",
+    "kemasan",
+    "minum",
+    "minuman",
+    "ringan"
+   ]
+  },
+  {
+   "id": "AL-IND-SABUN-DETERJEN",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Sabun, deterjen, produk minyak nabati",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 180
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "PO4",
+     "nama": "Fosfat (PO4)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "MBAS",
+     "nama": "MBAS / surfaktan anionik",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "sabun",
+     "nilai": 8,
+     "satuan": "m3/ton"
+    },
+    {
+     "label": "minyak nabati",
+     "nilai": 25,
+     "satuan": "m3/ton"
+    },
+    {
+     "label": "deterjen",
+     "nilai": 1,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "deterjen",
+    "industri",
+    "minyak",
+    "nabati",
+    "produk",
+    "sabun"
+   ]
+  },
+  {
+   "id": "AL-IND-BIR",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Bir",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 40
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 40
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per hektoliter bir",
+     "nilai": 6,
+     "satuan": "hL/hL"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "bir",
+    "brewery",
+    "industri"
+   ]
+  },
+  {
+   "id": "AL-IND-AKI-A",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Baterai timbal asam (aki)",
+   "sub_kategori": "A - existing saat 2014",
+   "kondisi_penerapan": "Telah beroperasi saat Permen berlaku; wajib memenuhi bagian B maksimal 3 tahun sejak diundangkan (Pasal 13(3))",
+   "parameter": [
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 25
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "SO4",
+     "nama": "Sulfat (SO4)",
+     "satuan": "g/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per kg bahan baku Pb",
+     "nilai": 10,
+     "satuan": "L/kg"
+    }
+   ],
+   "catatan": "Masa transisi 3 tahun sudah lewat, praktis bagian B berlaku.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "2014",
+    "a",
+    "accu",
+    "aki",
+    "asam",
+    "baterai",
+    "battery",
+    "existing",
+    "industri",
+    "saat",
+    "timbal"
+   ]
+  },
+  {
+   "id": "AL-IND-AKI-B",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Baterai timbal asam (aki)",
+   "sub_kategori": "B - unit baru / perencanaan baru",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 25
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "SO4",
+     "nama": "Sulfat (SO4)",
+     "satuan": "g/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 4
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per kg bahan baku Pb",
+     "nilai": 10,
+     "satuan": "L/kg"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "accu",
+    "aki",
+    "asam",
+    "b",
+    "baru",
+    "baterai",
+    "battery",
+    "industri",
+    "perencanaan",
+    "timbal",
+    "unit"
+   ]
+  },
+  {
+   "id": "AL-IND-BUAHSAYUR-A-NANAS",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan buah dan/atau sayuran",
+   "sub_kategori": "A - satu jenis kegiatan: Nanas",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 85
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 9,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Bila ada proses penggorengan, minyak-lemak dibatasi 15 mg/L.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "a",
+    "buah",
+    "industri",
+    "jenis",
+    "kegiatan",
+    "nanas",
+    "pengolahan",
+    "satu",
+    "sayuran"
+   ]
+  },
+  {
+   "id": "AL-IND-BUAHSAYUR-A-BUAH",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan buah dan/atau sayuran",
+   "sub_kategori": "A - satu jenis kegiatan: Buah lainnya",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 9,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Bila ada proses penggorengan, minyak-lemak dibatasi 15 mg/L.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "a",
+    "buah",
+    "industri",
+    "jenis",
+    "kegiatan",
+    "lainnya",
+    "pengolahan",
+    "satu",
+    "sayuran"
+   ]
+  },
+  {
+   "id": "AL-IND-BUAHSAYUR-A-JAMUR",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan buah dan/atau sayuran",
+   "sub_kategori": "A - satu jenis kegiatan: Jamur",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 20,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Bila ada proses penggorengan, minyak-lemak dibatasi 15 mg/L.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "a",
+    "buah",
+    "industri",
+    "jamur",
+    "jenis",
+    "kegiatan",
+    "pengolahan",
+    "satu",
+    "sayuran"
+   ]
+  },
+  {
+   "id": "AL-IND-BUAHSAYUR-A-SAYUR",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan buah dan/atau sayuran",
+   "sub_kategori": "A - satu jenis kegiatan: Sayuran lainnya",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 9,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Bila ada proses penggorengan, minyak-lemak dibatasi 15 mg/L.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "a",
+    "buah",
+    "industri",
+    "jenis",
+    "kegiatan",
+    "lainnya",
+    "pengolahan",
+    "satu",
+    "sayuran"
+   ]
+  },
+  {
+   "id": "AL-IND-BUAHSAYUR-B",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan buah dan/atau sayuran",
+   "sub_kategori": "B - kegiatan gabungan",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Bila ada penggorengan, minyak-lemak 15 mg/L. Kuantitas = jumlah (Qi x Pi) tiap kegiatan.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "b",
+    "buah",
+    "gabungan",
+    "industri",
+    "kegiatan",
+    "pengolahan",
+    "sayuran"
+   ]
+  },
+  {
+   "id": "AL-IND-BUAHSAYUR-C",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan buah dan/atau sayuran",
+   "sub_kategori": "C - kawasan industri (IPAL terpusat)",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "buah",
+    "c",
+    "industri",
+    "ipal",
+    "kawasan",
+    "pengolahan",
+    "sayuran",
+    "terpusat"
+   ]
+  },
+  {
+   "id": "AL-IND-IKAN-BEKU",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan hasil perikanan",
+   "sub_kategori": "A - pembekuan",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Cl2",
+     "nama": "Klorin bebas (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "ikan",
+     "nilai": 10,
+     "satuan": "m3/ton bahan baku"
+    },
+    {
+     "label": "udang",
+     "nilai": 30,
+     "satuan": "m3/ton bahan baku"
+    },
+    {
+     "label": "lain-lain",
+     "nilai": 15,
+     "satuan": "m3/ton bahan baku"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "a",
+    "fish",
+    "frozen",
+    "hasil",
+    "industri",
+    "pembekuan",
+    "pengolahan",
+    "perikanan",
+    "seafood",
+    "udang"
+   ]
+  },
+  {
+   "id": "AL-IND-IKAN-KALENG",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan hasil perikanan",
+   "sub_kategori": "A - pengalengan",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Cl2",
+     "nama": "Klorin bebas (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "ikan",
+     "nilai": 15,
+     "satuan": "m3/ton bahan baku"
+    },
+    {
+     "label": "udang",
+     "nilai": 30,
+     "satuan": "m3/ton bahan baku"
+    },
+    {
+     "label": "lain-lain",
+     "nilai": 20,
+     "satuan": "m3/ton bahan baku"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "a",
+    "canning",
+    "hasil",
+    "industri",
+    "pengalengan",
+    "pengolahan",
+    "perikanan",
+    "seafood"
+   ]
+  },
+  {
+   "id": "AL-IND-IKAN-TEPUNG",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan hasil perikanan",
+   "sub_kategori": "A - pembuatan tepung ikan",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 12,
+     "satuan": "m3/ton produk"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "a",
+    "fish",
+    "hasil",
+    "ikan",
+    "industri",
+    "meal",
+    "pembuatan",
+    "pengolahan",
+    "perikanan",
+    "tepung"
+   ]
+  },
+  {
+   "id": "AL-IND-IKAN-GABUNGAN",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan hasil perikanan",
+   "sub_kategori": "B - gabungan / C - kawasan industri perikanan",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Cl2",
+     "nama": "Klorin bebas (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "b",
+    "c",
+    "gabungan",
+    "hasil",
+    "industri",
+    "kawasan",
+    "pengolahan",
+    "perikanan"
+   ]
+  },
+  {
+   "id": "AL-IND-RUMPUT-LAUT",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan rumput laut",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Cl2",
+     "nama": "Klorin bebas (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 500,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "laut",
+    "pengolahan",
+    "rumput"
+   ]
+  },
+  {
+   "id": "AL-IND-KELAPA",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan kelapa",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 15,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kelapa",
+    "pengolahan"
+   ]
+  },
+  {
+   "id": "AL-IND-DAGING",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan daging",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 125
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 6,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "daging",
+    "industri",
+    "pengolahan"
+   ]
+  },
+  {
+   "id": "AL-IND-KEDELAI-KECAP",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan kedelai",
+   "sub_kategori": "Kecap",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 10,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kecap",
+    "kedelai",
+    "pengolahan"
+   ]
+  },
+  {
+   "id": "AL-IND-KEDELAI-TAHU",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan kedelai",
+   "sub_kategori": "Tahu",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 20,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kedelai",
+    "pengolahan",
+    "tahu"
+   ]
+  },
+  {
+   "id": "AL-IND-KEDELAI-TEMPE",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan kedelai",
+   "sub_kategori": "Tempe",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 10,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kedelai",
+    "pengolahan",
+    "tempe"
+   ]
+  },
+  {
+   "id": "AL-IND-JAMU",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan obat tradisional / jamu",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 15,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "jamu",
+    "obat",
+    "pengolahan",
+    "tradisional"
+   ]
+  },
+  {
+   "id": "AL-IND-TERNAK",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Peternakan sapi dan babi",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 25
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "sapi",
+     "nilai": 200,
+     "satuan": "L/ekor/hari"
+    },
+    {
+     "label": "babi",
+     "nilai": 40,
+     "satuan": "L/ekor/hari"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "babi",
+    "farm",
+    "industri",
+    "peternakan",
+    "sapi"
+   ]
+  },
+  {
+   "id": "AL-IND-MINYAK-GORENG-BASAH",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Minyak goreng",
+   "sub_kategori": "Proses basah",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "MBAS",
+     "nama": "MBAS / surfaktan anionik",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "PO4",
+     "nama": "Fosfat (PO4)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 5,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "basah",
+    "goreng",
+    "industri",
+    "minyak",
+    "proses",
+    "refinery"
+   ]
+  },
+  {
+   "id": "AL-IND-MINYAK-GORENG-KERING",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Minyak goreng",
+   "sub_kategori": "Proses kering",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "PO4",
+     "nama": "Fosfat (PO4)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 0.5,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "goreng",
+    "industri",
+    "kering",
+    "minyak",
+    "proses",
+    "refinery"
+   ]
+  },
+  {
+   "id": "AL-IND-GULA-A-PROSES",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Gula",
+   "sub_kategori": "A - kapasitas < 2.500 TCD, air limbah proses",
+   "kondisi_penerapan": "< 2.500 ton tebu/hari",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "proses",
+     "nilai": 0.5,
+     "satuan": "m3/ton tebu"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "2",
+    "500",
+    "a",
+    "air",
+    "gula",
+    "industri",
+    "kapasitas",
+    "limbah",
+    "proses",
+    "tcd"
+   ]
+  },
+  {
+   "id": "AL-IND-GULA-A-KONDENSOR",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Gula",
+   "sub_kategori": "A - kapasitas < 2.500 TCD, air limbah kondensor & abu ketel",
+   "kondisi_penerapan": "< 2.500 ton tebu/hari",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "kondensor",
+     "nilai": 25,
+     "satuan": "m3/ton tebu"
+    },
+    {
+     "label": "abu ketel",
+     "nilai": 2,
+     "satuan": "m3/ton tebu"
+    },
+    {
+     "label": "gabungan",
+     "nilai": 27.5,
+     "satuan": "m3/ton tebu"
+    }
+   ],
+   "catatan": "Kadar kondensor & abu ketel diturunkan dari beban/kuantitas pada tabel (beban g/ton dibagi m3/ton).",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "2",
+    "500",
+    "a",
+    "abu",
+    "air",
+    "gula",
+    "industri",
+    "kapasitas",
+    "ketel",
+    "kondensor",
+    "limbah",
+    "tcd"
+   ]
+  },
+  {
+   "id": "AL-IND-GULA-B",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Gula",
+   "sub_kategori": "B - kapasitas 2.500 - 10.000 TCD",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "air limbah gabungan",
+     "nilai": 6,
+     "satuan": "m3/ton tebu"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "000",
+    "10",
+    "2",
+    "500",
+    "b",
+    "gula",
+    "industri",
+    "kapasitas",
+    "tcd"
+   ]
+  },
+  {
+   "id": "AL-IND-GULA-C",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Gula",
+   "sub_kategori": "C - kapasitas > 10.000 TCD",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton tebu",
+     "nilai": 0.5,
+     "satuan": "m3/ton tebu"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "000",
+    "10",
+    "c",
+    "gula",
+    "industri",
+    "kapasitas",
+    "tcd"
+   ]
+  },
+  {
+   "id": "AL-IND-ROKOK-I",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Rokok dan/atau cerutu",
+   "sub_kategori": "Kategori I - primer basah + sekunder",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "basah",
+    "cengkeh",
+    "cerutu",
+    "i",
+    "industri",
+    "kategori",
+    "kretek",
+    "primer",
+    "rokok",
+    "sekunder",
+    "tembakau"
+   ]
+  },
+  {
+   "id": "AL-IND-ROKOK-II",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Rokok dan/atau cerutu",
+   "sub_kategori": "Kategori II - Kategori I + air limbah domestik",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "air",
+    "cengkeh",
+    "cerutu",
+    "domestik",
+    "i",
+    "ii",
+    "industri",
+    "kategori",
+    "kretek",
+    "limbah",
+    "rokok",
+    "tembakau"
+   ]
+  },
+  {
+   "id": "AL-IND-ROKOK-III",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Rokok dan/atau cerutu",
+   "sub_kategori": "Kategori III - primer kering / sekunder / tanpa cengkeh",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 80
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 160
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "cengkeh",
+    "cerutu",
+    "iii",
+    "industri",
+    "kategori",
+    "kering",
+    "kretek",
+    "primer",
+    "rokok",
+    "sekunder",
+    "tanpa",
+    "tembakau"
+   ]
+  },
+  {
+   "id": "AL-IND-ROKOK-IV",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Rokok dan/atau cerutu",
+   "sub_kategori": "Kategori IV - Kategori III + air limbah domestik",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 120
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "air",
+    "cengkeh",
+    "cerutu",
+    "domestik",
+    "iii",
+    "industri",
+    "iv",
+    "kategori",
+    "kretek",
+    "limbah",
+    "rokok",
+    "tembakau"
+   ]
+  },
+  {
+   "id": "AL-IND-ELEKTRONIKA",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Elektronika",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 110
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "F",
+     "nama": "Fluorida (F)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.6
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Cr6",
+     "nama": "Krom Heksavalen (Cr6+)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.002
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "elektronika",
+    "industri",
+    "pcb",
+    "semikonduktor"
+   ]
+  },
+  {
+   "id": "AL-IND-KOPI",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pengolahan kopi",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 90
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 30,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kopi",
+    "pengolahan"
+   ]
+  },
+  {
+   "id": "AL-IND-GULA-RAFINASI-GOL1",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Gula rafinasi",
+   "sub_kategori": "Golongan I (existing, berlaku 3 tahun setelah peraturan)",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "Suhu",
+     "nama": "Suhu",
+     "satuan": "°C",
+     "tipe": "maks",
+     "min": null,
+     "maks": 38
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TDS",
+     "nama": "Zat padat terlarut (TDS)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2000
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 0.4,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "3",
+    "berlaku",
+    "existing",
+    "golongan",
+    "gula",
+    "i",
+    "industri",
+    "peraturan",
+    "rafinasi",
+    "setelah",
+    "tahun"
+   ]
+  },
+  {
+   "id": "AL-IND-GULA-RAFINASI-GOL2",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Gula rafinasi",
+   "sub_kategori": "Golongan II (unit baru / rencana baru)",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "Suhu",
+     "nama": "Suhu",
+     "satuan": "°C",
+     "tipe": "maks",
+     "min": null,
+     "maks": 38
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TDS",
+     "nama": "Zat padat terlarut (TDS)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1000
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 0.4,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "baru",
+    "golongan",
+    "gula",
+    "ii",
+    "industri",
+    "rafinasi",
+    "rencana",
+    "unit"
+   ]
+  },
+  {
+   "id": "AL-IND-PETROKIMIA-HULU",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Petrokimia hulu",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 0.6,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Lampiran XXVII dan XXXII memuat isi identik.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "hulu",
+    "industri",
+    "petrokimia"
+   ]
+  },
+  {
+   "id": "AL-IND-RAYON",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Rayon",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton serat rayon",
+     "nilai": 130,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "rayon"
+   ]
+  },
+  {
+   "id": "AL-IND-KERAMIK",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Keramik",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "Co",
+     "nama": "Kobalt (Co)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.6
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton bahan baku",
+     "nilai": 1.5,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "keramik"
+   ]
+  },
+  {
+   "id": "AL-IND-PTA",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Asam tereftalat (PTA)",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Mn",
+     "nama": "Mangan (Mn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "Co",
+     "nama": "Kobalt (Co)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Fe",
+     "nama": "Besi (Fe)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 7
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 4.5,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "asam",
+    "industri",
+    "pta",
+    "tereftalat"
+   ]
+  },
+  {
+   "id": "AL-IND-PET",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Polyethylene tereftalat (PET)",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 2.0,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "pet",
+    "polyethylene",
+    "tereftalat"
+   ]
+  },
+  {
+   "id": "AL-IND-OLEOKIMIA-A",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Oleokimia dasar",
+   "sub_kategori": "A - fatty acid & fatty alcohol via jalur fatty acid",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 70
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 160
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "PO4",
+     "nama": "Fosfat (PO4)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 4,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "a",
+    "acid",
+    "alcohol",
+    "dasar",
+    "fatty",
+    "industri",
+    "jalur",
+    "oleokimia",
+    "via"
+   ]
+  },
+  {
+   "id": "AL-IND-OLEOKIMIA-B",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Oleokimia dasar",
+   "sub_kategori": "B - fatty alcohol via jalur alkyl ester",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 125
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "PO4",
+     "nama": "Fosfat (PO4)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 4,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "alcohol",
+    "alkyl",
+    "b",
+    "dasar",
+    "ester",
+    "fatty",
+    "industri",
+    "jalur",
+    "oleokimia",
+    "via"
+   ]
+  },
+  {
+   "id": "AL-IND-SODA-KOSTIK",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Soda kostik / khlor",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 25
+    },
+    {
+     "kode": "Cl2",
+     "nama": "Klorin bebas (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.8
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1.2
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.004
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton soda kostik",
+     "nilai": 3.0,
+     "satuan": "m3/ton"
+    },
+    {
+     "label": "per ton Cl2",
+     "nilai": 3.4,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "alkali",
+    "chlor",
+    "industri",
+    "khlor",
+    "kostik",
+    "soda"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-KRAFT-BLEACH",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Pulp - kraft dikelantang",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 350
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 85,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "dikelantang",
+    "industri",
+    "kertas",
+    "kraft",
+    "mill",
+    "paper",
+    "pulp"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-PULP-LARUT",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Pulp larut",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 95,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kertas",
+    "larut",
+    "mill",
+    "paper",
+    "pulp"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-KRAFT-UNBLEACH",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Pulp - kraft tidak dikelantang",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 50,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "dikelantang",
+    "industri",
+    "kertas",
+    "kraft",
+    "mill",
+    "paper",
+    "pulp",
+    "tidak"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-MEKANIK",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Pulp mekanik (CMP / groundwood)",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 120
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 60,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "cmp",
+    "groundwood",
+    "industri",
+    "kertas",
+    "mekanik",
+    "mill",
+    "paper",
+    "pulp"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-SEMIKIMIA",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Pulp semi kimia",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 70,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kertas",
+    "kimia",
+    "mill",
+    "paper",
+    "pulp",
+    "semi"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-SODA",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Pulp soda",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 80,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kertas",
+    "mill",
+    "paper",
+    "pulp",
+    "soda"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-DEINK",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "De-ink pulp (kertas bekas)",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 60,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "bekas",
+    "de",
+    "industri",
+    "ink",
+    "kertas",
+    "mill",
+    "paper",
+    "pulp"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-KERTAS-HALUS",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Kertas halus",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 50,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "halus",
+    "industri",
+    "kertas",
+    "mill",
+    "paper",
+    "pulp"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-KERTAS-KASAR",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Kertas kasar",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 90
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 175
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 80
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 40,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "kasar",
+    "kertas",
+    "mill",
+    "paper",
+    "pulp"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-KERTAS-SPARET",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Kertas 'Sparet' (istilah sesuai naskah)",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 45
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 175,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "istilah",
+    "kertas",
+    "mill",
+    "naskah",
+    "paper",
+    "pulp",
+    "sesuai",
+    "sparet"
+   ]
+  },
+  {
+   "id": "AL-IND-PULPKERTAS-KERTAS-KELANTANG",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pulp dan kertas",
+   "sub_kategori": "Kertas yang dikelantang",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 160
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 80
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 35,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "dikelantang",
+    "industri",
+    "kertas",
+    "mill",
+    "paper",
+    "pulp"
+   ]
+  },
+  {
+   "id": "AL-IND-ETANOL",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Etanol",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 15,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Naskah menulis satuan 'per ton produk tapioka' (salah ketik).",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "etanol",
+    "ethanol",
+    "industri"
+   ]
+  },
+  {
+   "id": "AL-IND-BATERAI-KERING-ALKALIN",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Baterai kering",
+   "sub_kategori": "Alkaline - Mangan",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 8
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.01
+    },
+    {
+     "kode": "Mn",
+     "nama": "Mangan (Mn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.06
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.4
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per kg baterai",
+     "nilai": 1.5,
+     "satuan": "L/kg"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "alkaline",
+    "baterai",
+    "industri",
+    "kering",
+    "mangan"
+   ]
+  },
+  {
+   "id": "AL-IND-BATERAI-KERING-KARBON",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Baterai kering",
+   "sub_kategori": "Karbon - Seng",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 4
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.01
+    },
+    {
+     "kode": "Mn",
+     "nama": "Mangan (Mn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per kg baterai",
+     "nilai": 0.25,
+     "satuan": "L/kg"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "baterai",
+    "industri",
+    "karbon",
+    "kering",
+    "seng"
+   ]
+  },
+  {
+   "id": "AL-IND-CAT",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Cat",
+   "sub_kategori": "Cat berbasis air (water base)",
+   "kondisi_penerapan": "Cat solvent base: zero discharge, tidak boleh dibuang ke perairan",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 80
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.01
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.8
+    },
+    {
+     "kode": "Cr6",
+     "nama": "Krom Heksavalen (Cr6+)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "Ti",
+     "nama": "Titanium (Ti)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.4
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.08
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per L cat water base",
+     "nilai": 0.5,
+     "satuan": "L/L"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "air",
+    "base",
+    "berbasis",
+    "cat",
+    "coating",
+    "industri",
+    "paint",
+    "water"
+   ]
+  },
+  {
+   "id": "AL-IND-FARMASI-BAHAN",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Farmasi",
+   "sub_kategori": "Proses pembuatan bahan formula",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "NTotal",
+     "nama": "Nitrogen Total (N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Parameter 'Total-N' disamakan dengan Nitrogen Total.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "bahan",
+    "farmasi",
+    "formula",
+    "industri",
+    "pembuatan",
+    "proses"
+   ]
+  },
+  {
+   "id": "AL-IND-FARMASI-FORMULASI",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Farmasi",
+   "sub_kategori": "Formulasi / pencampuran",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "farmasi",
+    "formulasi",
+    "industri",
+    "pencampuran"
+   ]
+  },
+  {
+   "id": "AL-IND-PESTISIDA-TEKNIS",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pestisida",
+   "sub_kategori": "Pembuatan pestisida teknis",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 25
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Benzena",
+     "nama": "Benzena",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Toluena",
+     "nama": "Toluena",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "CN",
+     "nama": "Sianida (CN)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.8
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "AmoniaTotal",
+     "nama": "Amonia Total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "BahanAktif",
+     "nama": "Bahan aktif total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 20,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "industri",
+    "pembuatan",
+    "pestisida",
+    "teknis"
+   ]
+  },
+  {
+   "id": "AL-IND-PESTISIDA-FORMULASI",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pestisida",
+   "sub_kategori": "Formulasi / pengemasan",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1.5
+    },
+    {
+     "kode": "BahanAktif",
+     "nama": "Bahan aktif total",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Benzena, toluena, sianida, tembaga: 0 (tidak boleh ada) pada naskah.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "formulasi",
+    "industri",
+    "pengemasan",
+    "pestisida"
+   ]
+  },
+  {
+   "id": "AL-IND-PUPUK-UREA",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pupuk",
+   "sub_kategori": "Pupuk urea",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1.5
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.75
+    },
+    {
+     "kode": "TKN",
+     "nama": "TKN",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1.5
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 10
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 15,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Nilai berupa beban pencemaran (kg per ton produk), bukan konsentrasi. Debit maks 15 m3/ton; konsentrasi ekuivalen = beban/15 x 1000.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "fertilizer",
+    "industri",
+    "pupuk",
+    "urea"
+   ]
+  },
+  {
+   "id": "AL-IND-PUPUK-N-LAIN",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pupuk",
+   "sub_kategori": "Pupuk nitrogen lain",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1.5
+    },
+    {
+     "kode": "TKN",
+     "nama": "TKN",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2.25
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 10
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 15,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Nilai berupa beban pencemaran (kg per ton produk), bukan konsentrasi. Debit maks 15 m3/ton; konsentrasi ekuivalen = beban/15 x 1000.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "fertilizer",
+    "industri",
+    "lain",
+    "nitrogen",
+    "pupuk"
+   ]
+  },
+  {
+   "id": "AL-IND-PUPUK-AMONIAK",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Industri - Pupuk",
+   "sub_kategori": "Pabrik amoniak",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.15
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.03
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "kg/ton",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.3
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 10
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "per ton produk",
+     "nilai": 15,
+     "satuan": "m3/ton"
+    }
+   ],
+   "catatan": "Nilai berupa beban pencemaran (kg per ton produk), bukan konsentrasi. Debit maks 15 m3/ton; konsentrasi ekuivalen = beban/15 x 1000.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "amoniak",
+    "fertilizer",
+    "industri",
+    "pabrik",
+    "pupuk"
+   ]
+  },
+  {
+   "id": "AL-RPH",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Rumah pemotongan hewan (RPH)",
+   "sub_kategori": "",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 25
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    }
+   ],
+   "kuantitas_air_limbah_maks": [
+    {
+     "label": "sapi/kerbau/kuda",
+     "nilai": 1.5,
+     "satuan": "m3/ekor/hari"
+    },
+    {
+     "label": "kambing/domba",
+     "nilai": 0.15,
+     "satuan": "m3/ekor/hari"
+    },
+    {
+     "label": "babi",
+     "nilai": 0.65,
+     "satuan": "m3/ekor/hari"
+    }
+   ],
+   "catatan": "",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "hewan",
+    "pemotongan",
+    "potong",
+    "rph",
+    "rumah",
+    "slaughterhouse"
+   ]
+  },
+  {
+   "id": "AL-DEFAULT-GOL1",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Usaha/kegiatan lain yang belum memiliki baku mutu (default)",
+   "sub_kategori": "Golongan I",
+   "kondisi_penerapan": "Badan air penerima sungai kelas I, ATAU BOD < 1.500 ppm dan COD < 3.000 ppm sebelum diolah (Pasal 14)",
+   "parameter": [
+    {
+     "kode": "Suhu",
+     "nama": "Suhu",
+     "satuan": "°C",
+     "tipe": "maks",
+     "min": null,
+     "maks": 38
+    },
+    {
+     "kode": "TDS",
+     "nama": "Zat padat terlarut (TDS)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2000
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "Fe",
+     "nama": "Besi (Fe)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Mn",
+     "nama": "Mangan (Mn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Ba",
+     "nama": "Barium (Ba)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Cr6",
+     "nama": "Krom Heksavalen (Cr6+)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.002
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Sn",
+     "nama": "Stanum (Sn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "As",
+     "nama": "Arsen (As)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Se",
+     "nama": "Selenium (Se)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.2
+    },
+    {
+     "kode": "Co",
+     "nama": "Kobalt (Co)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.4
+    },
+    {
+     "kode": "CN",
+     "nama": "Sianida (CN)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.05
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "F",
+     "nama": "Fluorida (F)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "Cl2",
+     "nama": "Klorin bebas (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "NO3N",
+     "nama": "Nitrat (NO3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    },
+    {
+     "kode": "NO2N",
+     "nama": "Nitrit (NO2-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "NTotal",
+     "nama": "Nitrogen Total (N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "MBAS",
+     "nama": "MBAS / surfaktan anionik",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "TC",
+     "nama": "Total coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10000
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Lampiran XLVII. Pasal 15: parameter dapat dikurangi lewat kajian (10 data berurutan).",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "baku",
+    "belum",
+    "default",
+    "golongan",
+    "i",
+    "kegiatan",
+    "lain",
+    "lainnya",
+    "memiliki",
+    "mutu",
+    "umum",
+    "usaha"
+   ]
+  },
+  {
+   "id": "AL-DEFAULT-GOL2",
+   "regulasi_id": "PERMEN_LH_5_2014",
+   "kategori": "air_limbah",
+   "sektor": "Usaha/kegiatan lain yang belum memiliki baku mutu (default)",
+   "sub_kategori": "Golongan II",
+   "kondisi_penerapan": "BOD > 1.500 ppm dan/atau COD > 3.000 ppm sebelum diolah, dan badan air penerima bukan sungai kelas I (Pasal 14)",
+   "parameter": [
+    {
+     "kode": "Suhu",
+     "nama": "Suhu",
+     "satuan": "°C",
+     "tipe": "maks",
+     "min": null,
+     "maks": 40
+    },
+    {
+     "kode": "TDS",
+     "nama": "Zat padat terlarut (TDS)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 4000
+    },
+    {
+     "kode": "TSS",
+     "nama": "TSS",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 400
+    },
+    {
+     "kode": "pH",
+     "nama": "pH",
+     "satuan": "-",
+     "tipe": "rentang",
+     "min": 6,
+     "maks": 9
+    },
+    {
+     "kode": "Fe",
+     "nama": "Besi (Fe)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Mn",
+     "nama": "Mangan (Mn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Ba",
+     "nama": "Barium (Ba)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "Cu",
+     "nama": "Tembaga (Cu)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Cr6",
+     "nama": "Krom Heksavalen (Cr6+)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Cr",
+     "nama": "Krom Total (Cr)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.1
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.005
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "Sn",
+     "nama": "Stanum (Sn)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "As",
+     "nama": "Arsen (As)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Se",
+     "nama": "Selenium (Se)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Ni",
+     "nama": "Nikel (Ni)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Co",
+     "nama": "Kobalt (Co)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.6
+    },
+    {
+     "kode": "CN",
+     "nama": "Sianida (CN)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "Sulfida",
+     "nama": "Sulfida (S)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "F",
+     "nama": "Fluorida (F)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "Cl2",
+     "nama": "Klorin bebas (Cl2)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    },
+    {
+     "kode": "NH3N",
+     "nama": "Amonia (NH3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "NO3N",
+     "nama": "Nitrat (NO3-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "NO2N",
+     "nama": "Nitrit (NO2-N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3
+    },
+    {
+     "kode": "NTotal",
+     "nama": "Nitrogen Total (N)",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    },
+    {
+     "kode": "BOD5",
+     "nama": "BOD5",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "COD",
+     "nama": "COD",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "MBAS",
+     "nama": "MBAS / surfaktan anionik",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Fenol",
+     "nama": "Fenol",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "MinyakLemak",
+     "nama": "Minyak & Lemak",
+     "satuan": "mg/L",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    },
+    {
+     "kode": "TC",
+     "nama": "Total coliform",
+     "satuan": "MPN/100 mL",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10000
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Lampiran XLVII.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "baku",
+    "belum",
+    "default",
+    "golongan",
+    "ii",
+    "kegiatan",
+    "lain",
+    "lainnya",
+    "memiliki",
+    "mutu",
+    "umum",
+    "usaha"
+   ]
+  },
+  {
+   "id": "EM-BOILER-BIOMASSA-SERABUT",
+   "regulasi_id": "PERMEN_LH_7_2007",
+   "kategori": "emisi",
+   "sektor": "Ketel uap (boiler)",
+   "sub_kategori": "Bahan bakar biomassa serabut dan/atau cangkang",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "PM",
+     "nama": "Partikulat",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 600
+    },
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 800
+    },
+    {
+     "kode": "HCl",
+     "nama": "Hidrogen Klorida (HCl)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Cl2g",
+     "nama": "Gas Klorin (Cl2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "NH3g",
+     "nama": "Amonia (NH3)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1
+    },
+    {
+     "kode": "HF",
+     "nama": "Hidrogen Fluorida (HF)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 8
+    },
+    {
+     "kode": "Opasitas",
+     "nama": "Opasitas",
+     "satuan": "%",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Satuan pada naskah: mg/m3 pada kondisi standar 25 C, 1 atm. Partikulat dikoreksi 6% O2. Tidak berlaku untuk industri besi-baja, pulp-kertas, semen, PLTU, dan industri lain yang punya BME tersendiri (Pasal 3). Gubernur dapat menetapkan lebih ketat. Bahan bakar campuran: Lampiran VII (rata-rata tertimbang panas).",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "bahan",
+    "bakar",
+    "biomassa",
+    "boiler",
+    "cangkang",
+    "ketel",
+    "sawit",
+    "serabut",
+    "uap"
+   ]
+  },
+  {
+   "id": "EM-BOILER-BIOMASSA-TEBU",
+   "regulasi_id": "PERMEN_LH_7_2007",
+   "kategori": "emisi",
+   "sektor": "Ketel uap (boiler)",
+   "sub_kategori": "Bahan bakar ampas dan/atau daun tebu kering",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "PM",
+     "nama": "Partikulat",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 600
+    },
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 800
+    },
+    {
+     "kode": "Opasitas",
+     "nama": "Opasitas",
+     "satuan": "%",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Satuan pada naskah: mg/m3 pada kondisi standar 25 C, 1 atm. Partikulat dikoreksi 6% O2. Tidak berlaku untuk industri besi-baja, pulp-kertas, semen, PLTU, dan industri lain yang punya BME tersendiri (Pasal 3). Gubernur dapat menetapkan lebih ketat. Bahan bakar campuran: Lampiran VII (rata-rata tertimbang panas).",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "ampas",
+    "bagasse",
+    "bahan",
+    "bakar",
+    "boiler",
+    "daun",
+    "kering",
+    "ketel",
+    "tebu",
+    "uap"
+   ]
+  },
+  {
+   "id": "EM-BOILER-BIOMASSA-LAIN",
+   "regulasi_id": "PERMEN_LH_7_2007",
+   "kategori": "emisi",
+   "sektor": "Ketel uap (boiler)",
+   "sub_kategori": "Bahan bakar biomassa lain (selain serabut/cangkang & ampas tebu)",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "PM",
+     "nama": "Partikulat",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 350
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 800
+    },
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1000
+    },
+    {
+     "kode": "HCl",
+     "nama": "Hidrogen Klorida (HCl)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "Cl2g",
+     "nama": "Gas Klorin (Cl2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "NH3g",
+     "nama": "Amonia (NH3)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 0.5
+    },
+    {
+     "kode": "HF",
+     "nama": "Hidrogen Fluorida (HF)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10
+    },
+    {
+     "kode": "Opasitas",
+     "nama": "Opasitas",
+     "satuan": "%",
+     "tipe": "maks",
+     "min": null,
+     "maks": 30
+    },
+    {
+     "kode": "H2S",
+     "nama": "Total Sulfur Tereduksi (H2S)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 35
+    },
+    {
+     "kode": "Hg",
+     "nama": "Merkuri (Hg)",
+     "satuan": "mg/m3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 5
+    },
+    {
+     "kode": "As",
+     "nama": "Arsen (As)",
+     "satuan": "mg/m3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 8
+    },
+    {
+     "kode": "Sb",
+     "nama": "Antimon (Sb)",
+     "satuan": "mg/m3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 8
+    },
+    {
+     "kode": "Cd",
+     "nama": "Kadmium (Cd)",
+     "satuan": "mg/m3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 8
+    },
+    {
+     "kode": "Zn",
+     "nama": "Seng (Zn)",
+     "satuan": "mg/m3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "Pb",
+     "nama": "Timbal (Pb)",
+     "satuan": "mg/m3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 12
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Satuan pada naskah: mg/m3 pada kondisi standar 25 C, 1 atm. Partikulat dikoreksi 6% O2. Tidak berlaku untuk industri besi-baja, pulp-kertas, semen, PLTU, dan industri lain yang punya BME tersendiri (Pasal 3). Gubernur dapat menetapkan lebih ketat. Bahan bakar campuran: Lampiran VII (rata-rata tertimbang panas).",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "ampas",
+    "bahan",
+    "bakar",
+    "biomassa",
+    "boiler",
+    "cangkang",
+    "kayu",
+    "ketel",
+    "lain",
+    "pelet",
+    "selain",
+    "serabut",
+    "tebu",
+    "uap",
+    "woodchip"
+   ]
+  },
+  {
+   "id": "EM-BOILER-BATUBARA",
+   "regulasi_id": "PERMEN_LH_7_2007",
+   "kategori": "emisi",
+   "sektor": "Ketel uap (boiler)",
+   "sub_kategori": "Bahan bakar batubara",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "PM",
+     "nama": "Partikulat",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 230
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 750
+    },
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 825
+    },
+    {
+     "kode": "Opasitas",
+     "nama": "Opasitas",
+     "satuan": "%",
+     "tipe": "maks",
+     "min": null,
+     "maks": 20
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Satuan pada naskah: mg/m3 pada kondisi standar 25 C, 1 atm. Partikulat dikoreksi 6% O2. Tidak berlaku untuk industri besi-baja, pulp-kertas, semen, PLTU, dan industri lain yang punya BME tersendiri (Pasal 3). Gubernur dapat menetapkan lebih ketat. Bahan bakar campuran: Lampiran VII (rata-rata tertimbang panas).",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "bahan",
+    "bakar",
+    "batubara",
+    "boiler",
+    "coal",
+    "ketel",
+    "uap"
+   ]
+  },
+  {
+   "id": "EM-BOILER-MINYAK",
+   "regulasi_id": "PERMEN_LH_7_2007",
+   "kategori": "emisi",
+   "sektor": "Ketel uap (boiler)",
+   "sub_kategori": "Bahan bakar minyak",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "PM",
+     "nama": "Partikulat",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 700
+    },
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 700
+    },
+    {
+     "kode": "Opasitas",
+     "nama": "Opasitas",
+     "satuan": "%",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Satuan pada naskah: mg/m3 pada kondisi standar 25 C, 1 atm. Partikulat dikoreksi 3% O2. Tidak berlaku untuk industri besi-baja, pulp-kertas, semen, PLTU, dan industri lain yang punya BME tersendiri (Pasal 3). Gubernur dapat menetapkan lebih ketat. Bahan bakar campuran: Lampiran VII (rata-rata tertimbang panas).",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "bahan",
+    "bakar",
+    "boiler",
+    "hsd",
+    "ketel",
+    "mfo",
+    "minyak",
+    "solar",
+    "uap"
+   ]
+  },
+  {
+   "id": "EM-BOILER-GAS",
+   "regulasi_id": "PERMEN_LH_7_2007",
+   "kategori": "emisi",
+   "sektor": "Ketel uap (boiler)",
+   "sub_kategori": "Bahan bakar gas",
+   "kondisi_penerapan": "",
+   "parameter": [
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 650
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Satuan pada naskah: mg/m3 pada kondisi standar 25 C, 1 atm. Tidak berlaku untuk industri besi-baja, pulp-kertas, semen, PLTU, dan industri lain yang punya BME tersendiri (Pasal 3). Gubernur dapat menetapkan lebih ketat. Bahan bakar campuran: Lampiran VII (rata-rata tertimbang panas).",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "bahan",
+    "bakar",
+    "boiler",
+    "cng",
+    "gas",
+    "ketel",
+    "lng",
+    "uap"
+   ]
+  },
+  {
+   "id": "EM-GENSET-1-MINYAK",
+   "regulasi_id": "PERMEN_LHK_11_2021",
+   "kategori": "emisi",
+   "sektor": "Mesin pembakaran dalam / genset",
+   "sub_kategori": "Kapasitas 101 - 500 kW, bahan bakar minyak",
+   "kondisi_penerapan": "101 - 500 kW; BBM",
+   "parameter": [
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 3400
+    },
+    {
+     "kode": "CO",
+     "nama": "Karbon Monoksida (CO)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 170
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "mg/Nm3, kondisi kering, 25 C 1 atm, dikoreksi 15% O2; NOx sbg NO2+NO. Dikecualikan dari pemantauan: <=100 kW, <1.000 jam/tahun, darurat <=200 jam/tahun, mesin las. Frekuensi: 101-500 kW 1x/3 th; 501-1000 kW 1x/th; >=1001 kW 1x/6 bln. Uji oleh lab teregistrasi KLH.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "101",
+    "500",
+    "bahan",
+    "bakar",
+    "dalam",
+    "diesel",
+    "engine",
+    "gas",
+    "generator",
+    "genset",
+    "kapasitas",
+    "kw",
+    "mesin",
+    "minyak",
+    "pembakaran",
+    "solar"
+   ]
+  },
+  {
+   "id": "EM-GENSET-1-GAS",
+   "regulasi_id": "PERMEN_LHK_11_2021",
+   "kategori": "emisi",
+   "sektor": "Mesin pembakaran dalam / genset",
+   "sub_kategori": "Kapasitas 101 - 500 kW, bahan bakar gas",
+   "kondisi_penerapan": "101 - 500 kW; gas",
+   "parameter": [
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "CO",
+     "nama": "Karbon Monoksida (CO)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 450
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "mg/Nm3, kondisi kering, 25 C 1 atm, dikoreksi 15% O2; NOx sbg NO2+NO. Dikecualikan dari pemantauan: <=100 kW, <1.000 jam/tahun, darurat <=200 jam/tahun, mesin las. Frekuensi: 101-500 kW 1x/3 th; 501-1000 kW 1x/th; >=1001 kW 1x/6 bln. Uji oleh lab teregistrasi KLH.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "101",
+    "500",
+    "bahan",
+    "bakar",
+    "dalam",
+    "diesel",
+    "engine",
+    "gas",
+    "generator",
+    "genset",
+    "kapasitas",
+    "kw",
+    "mesin",
+    "pembakaran",
+    "solar"
+   ]
+  },
+  {
+   "id": "EM-GENSET-2-MINYAK",
+   "regulasi_id": "PERMEN_LHK_11_2021",
+   "kategori": "emisi",
+   "sektor": "Mesin pembakaran dalam / genset",
+   "sub_kategori": "Kapasitas 501 - 1.000 kW, bahan bakar minyak",
+   "kondisi_penerapan": "501 - 1.000 kW; BBM",
+   "parameter": [
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 1850
+    },
+    {
+     "kode": "CO",
+     "nama": "Karbon Monoksida (CO)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 77
+    },
+    {
+     "kode": "PM",
+     "nama": "Partikulat",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 95
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 160
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "mg/Nm3, kondisi kering, 25 C 1 atm, dikoreksi 15% O2; NOx sbg NO2+NO. Dikecualikan dari pemantauan: <=100 kW, <1.000 jam/tahun, darurat <=200 jam/tahun, mesin las. Frekuensi: 101-500 kW 1x/3 th; 501-1000 kW 1x/th; >=1001 kW 1x/6 bln. Uji oleh lab teregistrasi KLH.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "000",
+    "1",
+    "501",
+    "bahan",
+    "bakar",
+    "dalam",
+    "diesel",
+    "engine",
+    "gas",
+    "generator",
+    "genset",
+    "kapasitas",
+    "kw",
+    "mesin",
+    "minyak",
+    "pembakaran",
+    "solar"
+   ]
+  },
+  {
+   "id": "EM-GENSET-2-GAS",
+   "regulasi_id": "PERMEN_LHK_11_2021",
+   "kategori": "emisi",
+   "sektor": "Mesin pembakaran dalam / genset",
+   "sub_kategori": "Kapasitas 501 - 1.000 kW, bahan bakar gas",
+   "kondisi_penerapan": "501 - 1.000 kW; gas",
+   "parameter": [
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 300
+    },
+    {
+     "kode": "CO",
+     "nama": "Karbon Monoksida (CO)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "mg/Nm3, kondisi kering, 25 C 1 atm, dikoreksi 15% O2; NOx sbg NO2+NO. Dikecualikan dari pemantauan: <=100 kW, <1.000 jam/tahun, darurat <=200 jam/tahun, mesin las. Frekuensi: 101-500 kW 1x/3 th; 501-1000 kW 1x/th; >=1001 kW 1x/6 bln. Uji oleh lab teregistrasi KLH.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "000",
+    "1",
+    "501",
+    "bahan",
+    "bakar",
+    "dalam",
+    "diesel",
+    "engine",
+    "gas",
+    "generator",
+    "genset",
+    "kapasitas",
+    "kw",
+    "mesin",
+    "pembakaran",
+    "solar"
+   ]
+  },
+  {
+   "id": "EM-GENSET-3-MINYAK",
+   "regulasi_id": "PERMEN_LHK_11_2021",
+   "kategori": "emisi",
+   "sektor": "Mesin pembakaran dalam / genset",
+   "sub_kategori": "Kapasitas 1.001 - 3.000 kW, bahan bakar minyak",
+   "kondisi_penerapan": "1.001 - 3.000 kW; BBM",
+   "parameter": [
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2300
+    },
+    {
+     "kode": "CO",
+     "nama": "Karbon Monoksida (CO)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 168
+    },
+    {
+     "kode": "PM",
+     "nama": "Partikulat",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 90
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "mg/Nm3, kondisi kering, 25 C 1 atm, dikoreksi 15% O2; NOx sbg NO2+NO. Dikecualikan dari pemantauan: <=100 kW, <1.000 jam/tahun, darurat <=200 jam/tahun, mesin las. Frekuensi: 101-500 kW 1x/3 th; 501-1000 kW 1x/th; >=1001 kW 1x/6 bln. Uji oleh lab teregistrasi KLH.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "000",
+    "001",
+    "1",
+    "3",
+    "bahan",
+    "bakar",
+    "dalam",
+    "diesel",
+    "engine",
+    "gas",
+    "generator",
+    "genset",
+    "kapasitas",
+    "kw",
+    "mesin",
+    "minyak",
+    "pembakaran",
+    "solar"
+   ]
+  },
+  {
+   "id": "EM-GENSET-3-GAS",
+   "regulasi_id": "PERMEN_LHK_11_2021",
+   "kategori": "emisi",
+   "sektor": "Mesin pembakaran dalam / genset",
+   "sub_kategori": "Kapasitas 1.001 - 3.000 kW, bahan bakar gas",
+   "kondisi_penerapan": "1.001 - 3.000 kW; gas",
+   "parameter": [
+    {
+     "kode": "NOx",
+     "nama": "Nitrogen Oksida (NOx sbg NO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 285
+    },
+    {
+     "kode": "CO",
+     "nama": "Karbon Monoksida (CO)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 250
+    },
+    {
+     "kode": "SO2",
+     "nama": "Sulfur Dioksida (SO2)",
+     "satuan": "mg/Nm3",
+     "tipe": "maks",
+     "min": null,
+     "maks": 60
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "mg/Nm3, kondisi kering, 25 C 1 atm, dikoreksi 15% O2; NOx sbg NO2+NO. Dikecualikan dari pemantauan: <=100 kW, <1.000 jam/tahun, darurat <=200 jam/tahun, mesin las. Frekuensi: 101-500 kW 1x/3 th; 501-1000 kW 1x/th; >=1001 kW 1x/6 bln. Uji oleh lab teregistrasi KLH.",
+   "perlu_verifikasi": false,
+   "kata_kunci": [
+    "000",
+    "001",
+    "1",
+    "3",
+    "bahan",
+    "bakar",
+    "dalam",
+    "diesel",
+    "engine",
+    "gas",
+    "generator",
+    "genset",
+    "kapasitas",
+    "kw",
+    "mesin",
+    "pembakaran",
+    "solar"
+   ]
+  },
+  {
+   "id": "UA-NASIONAL",
+   "regulasi_id": "PP_22_2021_LAMP_VII",
+   "kategori": "udara_ambien",
+   "sektor": "Udara ambien",
+   "sub_kategori": "Baku mutu udara ambien nasional",
+   "kondisi_penerapan": "Pemantauan udara ambien (bukan emisi cerobong)",
+   "parameter": [
+    {
+     "kode": "SO2_1J",
+     "nama": "SO2",
+     "satuan": "ug/m3",
+     "periode": "1 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "SO2_24J",
+     "nama": "SO2",
+     "satuan": "ug/m3",
+     "periode": "24 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "SO2_1T",
+     "nama": "SO2",
+     "satuan": "ug/m3",
+     "periode": "1 tahun",
+     "tipe": "maks",
+     "min": null,
+     "maks": 45
+    },
+    {
+     "kode": "CO_1J",
+     "nama": "CO",
+     "satuan": "ug/m3",
+     "periode": "1 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 10000
+    },
+    {
+     "kode": "CO_8J",
+     "nama": "CO",
+     "satuan": "ug/m3",
+     "periode": "8 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 4000
+    },
+    {
+     "kode": "NO2_1J",
+     "nama": "NO2",
+     "satuan": "ug/m3",
+     "periode": "1 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 200
+    },
+    {
+     "kode": "NO2_24J",
+     "nama": "NO2",
+     "satuan": "ug/m3",
+     "periode": "24 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 65
+    },
+    {
+     "kode": "NO2_1T",
+     "nama": "NO2",
+     "satuan": "ug/m3",
+     "periode": "1 tahun",
+     "tipe": "maks",
+     "min": null,
+     "maks": 50
+    },
+    {
+     "kode": "O3_1J",
+     "nama": "O3 (oksidan)",
+     "satuan": "ug/m3",
+     "periode": "1 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 150
+    },
+    {
+     "kode": "O3_8J",
+     "nama": "O3 (oksidan)",
+     "satuan": "ug/m3",
+     "periode": "8 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 100
+    },
+    {
+     "kode": "O3_1T",
+     "nama": "O3 (oksidan)",
+     "satuan": "ug/m3",
+     "periode": "1 tahun",
+     "tipe": "maks",
+     "min": null,
+     "maks": 35
+    },
+    {
+     "kode": "NMHC_3J",
+     "nama": "Hidrokarbon non-metana (NMHC)",
+     "satuan": "ug/m3",
+     "periode": "3 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 160
+    },
+    {
+     "kode": "TSP_24J",
+     "nama": "TSP",
+     "satuan": "ug/m3",
+     "periode": "24 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 230
+    },
+    {
+     "kode": "PM10_24J",
+     "nama": "PM10",
+     "satuan": "ug/m3",
+     "periode": "24 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 75
+    },
+    {
+     "kode": "PM10_1T",
+     "nama": "PM10",
+     "satuan": "ug/m3",
+     "periode": "1 tahun",
+     "tipe": "maks",
+     "min": null,
+     "maks": 40
+    },
+    {
+     "kode": "PM25_24J",
+     "nama": "PM2,5",
+     "satuan": "ug/m3",
+     "periode": "24 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 55
+    },
+    {
+     "kode": "PM25_1T",
+     "nama": "PM2,5",
+     "satuan": "ug/m3",
+     "periode": "1 tahun",
+     "tipe": "maks",
+     "min": null,
+     "maks": 15
+    },
+    {
+     "kode": "PB_24J",
+     "nama": "Timbal (Pb)",
+     "satuan": "ug/m3",
+     "periode": "24 jam",
+     "tipe": "maks",
+     "min": null,
+     "maks": 2
+    }
+   ],
+   "kuantitas_air_limbah_maks": [],
+   "catatan": "Diambil dari ringkasan sekunder (lab.id) atas PP 22/2021 Lampiran VII; verifikasi ke naskah PP, terutama nilai Pb dan ada/tidaknya baku mutu 1 tahun untuk Pb dan TSP.",
+   "perlu_verifikasi": true,
+   "kata_kunci": [
+    "udara",
+    "ambien",
+    "ambient",
+    "pm10",
+    "pm25",
+    "so2",
+    "no2"
+   ]
+  }
+ ]
+}
