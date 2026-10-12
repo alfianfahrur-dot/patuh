@@ -1,0 +1,23 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "JWT_SECRET",
+      "description": "JWT signing secret for authentication tokens",
+      "requiredAtBoot": true,
+      "generatedForDevelopment": true
+    },
+    {
+      "name": "EMERGENT_EMAIL_KEY",
+      "description": "Emergent email service API key for sending verification, invitation, and reminder emails",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "EMERGENT_LLM_KEY",
+      "description": "Emergent object storage API key for uploading LHU (lab test report) files",
+      "requiredAtBoot": false
+    }
+  ]
+}

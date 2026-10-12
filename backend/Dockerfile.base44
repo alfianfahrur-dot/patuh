@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.txt .
+# litellm is listed but never imported; its URL-based install may fail, so filter it out.
+RUN grep -v "^litellm @" requirements.txt | pip install --no-cache-dir -r /dev/stdin
+EXPOSE 8000
+CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
